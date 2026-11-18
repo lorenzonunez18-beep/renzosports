@@ -1,0 +1,945 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080a13"><title>RENZO'S SPORTS LAB V15 | Matchup Research</title><style>
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif;color:#f8f8fc;background:#070910}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 80% 0%,#25132e 0,transparent 38%),#070910}body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(#fff9 .7px,transparent 1px);background-size:53px 57px;opacity:.2}.wrap{position:relative;max-width:1180px;margin:auto;padding:18px 16px 60px}header{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid #303142;padding-bottom:18px}.brand{font-size:22px;font-weight:950;letter-spacing:-.8px}.brand b{color:#f8a2e8}.eyebrow{font-size:11px;letter-spacing:2px;color:#f3a2df;font-weight:900}.muted{color:#a5a9bb}.small{font-size:12px}.live{border:1px solid #48425b;border-radius:30px;padding:8px 10px;font-size:11px;font-weight:800}.hero{padding:25px 0 15px}.hero h1{font-size:clamp(29px,5vw,48px);line-height:1.04;letter-spacing:-1.6px;margin:8px 0}.hero p{margin:0;color:#b3b4c5}.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:18px 0}.seg{display:flex;background:#161826;border:1px solid #333447;border-radius:12px;padding:4px;gap:4px}button{font:inherit;cursor:pointer}.seg button,.action{border:0;border-radius:9px;padding:11px 15px;background:transparent;color:#b9b7c7;font-weight:800}.seg button.active{background:#e994d9;color:#170d1c}.action{background:#242536;color:#fff;border:1px solid #414157}.action:disabled{opacity:.55}.date{font-size:13px;font-weight:800;color:#e9e7f0}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0 22px}.stat,.panel,.game{border:1px solid #303145;background:#141622e8;border-radius:17px}.stat{padding:15px}.stat strong{font-size:25px;display:block;margin-top:5px}.stat span{font-size:11px;color:#a7a9bc}.section-title{display:flex;justify-content:space-between;align-items:center;margin:18px 0 12px}.section-title h2{font-size:19px;margin:0}.games{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,310px),1fr));gap:12px}.game{text-align:left;color:inherit;padding:18px;transition:border-color .2s,transform .2s;width:100%}.game:hover,.game:focus{border-color:#ed91d9;transform:translateY(-2px)}.game .top{display:flex;justify-content:space-between;gap:8px;color:#a8a8bc;font-size:11px;margin-bottom:16px}.team{display:flex;align-items:center;gap:12px;margin:12px 0}.team img{width:42px;height:42px;object-fit:contain}.team .name{flex:1;font-weight:850}.team .score{font-size:25px;font-weight:950}.pill{border-radius:30px;padding:5px 9px;background:#2d2137;color:#f3a4e2;font-size:10px;font-weight:900}.status{font-size:12px;color:#a9adbf;border-top:1px solid #303145;margin-top:15px;padding-top:12px}.panel{padding:20px;margin-top:18px}.detail-head{display:flex;justify-content:space-between;gap:10px;align-items:center}.detail-head h2{margin:0}.close{background:#252639;color:white;border:1px solid #44445b;padding:9px 12px;border-radius:9px}.match{display:flex;align-items:center;justify-content:space-around;gap:10px;text-align:center;margin:20px 0}.match img{width:65px;height:65px;object-fit:contain}.match strong{display:block;font-size:15px}.match .vs{color:#f1a1df;font-weight:900}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}.tabs button{background:#242536;border:1px solid #424156;color:#f2f0f8;padding:10px 13px;border-radius:9px;font-weight:750}.tabs button.active{background:#e994d9;color:#17101c}.rows{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:10px}.item{background:#1d2030;border-radius:11px;padding:12px}.item b{display:block;margin-bottom:5px}.item p{margin:5px 0;color:#b3b5c5;font-size:13px}.note{color:#b5b4c6;font-size:12px;line-height:1.6}.warn{color:#ffc67b}.good{color:#7ce6b8}.empty{padding:28px 16px;text-align:center;border:1px dashed #48445a;border-radius:16px;color:#b7b7c8}.hidden{display:none!important}.footer{font-size:11px;color:#9397aa;margin-top:24px}.loading{opacity:.65}.scroll{overflow:auto}.players{width:100%;border-collapse:collapse;font-size:12px}.players th,.players td{padding:10px 7px;border-bottom:1px solid #34364a;text-align:left;white-space:nowrap}.players th{color:#b4b4c5}.players img{width:30px;height:30px;object-fit:cover;border-radius:50%;vertical-align:middle;margin-right:7px}.simrow{display:grid;grid-template-columns:1fr 1fr;gap:12px}.simrow label{font-size:12px;color:#c2c1d0}.simrow input{width:100%;padding:12px;margin-top:5px;border-radius:8px;border:1px solid #4b465a;background:#0d101a;color:#fff;font-size:16px}.run{background:#ee99de;color:#170e1c;border:0;border-radius:9px;padding:12px 16px;font-weight:900;margin:14px 0}.progress{height:12px;background:#363447;border-radius:20px;overflow:hidden}.progress div{height:100%;background:#f09ddd}.right{margin-left:auto}@media(max-width:520px){.brand{font-size:18px}.stats{gap:7px}.stat{padding:11px}.stat strong{font-size:21px}.hero{padding-top:20px}.hero h1{font-size:34px}.toolbar{gap:8px}.seg button{padding:10px 12px}.match img{width:48px;height:48px}}
+
+.intel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px}.intel-card{background:#1d2030;border:1px solid #38394d;border-radius:12px;padding:15px}.intel-card h3{font-size:14px;margin:0 0 8px;color:#f5a5e2}.intel-card p{margin:6px 0;color:#d1d0df;font-size:13px}.tag{display:inline-block;border:1px solid #4d4662;border-radius:20px;padding:4px 8px;color:#d8c3e2;font-size:11px;margin:3px}.alert{background:#302333;border:1px solid #704761;padding:13px;border-radius:10px;font-size:12px;line-height:1.6;color:#f3d5e8}.meter{height:9px;background:#303244;border-radius:20px;overflow:hidden}.meter>div{height:100%;background:linear-gradient(90deg,#c77dce,#f5a5e2)}
+ .finder{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin:8px 0 16px}.finder input,.finder select{background:#181a29;color:#f7f3fb;border:1px solid #474357;border-radius:10px;padding:12px;font:inherit;min-width:0}.finder input[type=search]{flex:1;min-width:180px}.finder label{font-size:12px;color:#c7c1d2}.finder input[type=date]{max-width:170px;color-scheme:dark}.finder select{max-width:150px}.finder .action{padding:12px}.resultnote{font-size:12px;color:#c1b8c9;margin:0 0 12px}.game:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #f4a3e3;outline-offset:2px}@media(max-width:520px){.finder input[type=search]{flex-basis:100%}} 
+.prop-heading{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin:4px 0 16px}.prop-heading h3{font-size:22px;letter-spacing:-.5px;margin:6px 0}.prop-heading p{margin:0}.prop-chooser{margin-bottom:12px}.prop-controls{display:flex;gap:7px;overflow-x:auto;padding:3px 0 10px;scrollbar-width:thin}.prop-markets{display:flex;flex-wrap:wrap;gap:8px;overflow:visible;padding:5px 0 12px}.prop-market-heading{margin:12px 0 5px;font-size:11px;font-weight:900;letter-spacing:.11em;color:#ed9cdb;text-transform:uppercase}.prop-market-note{font-size:12px;color:#c2bbcf;margin:0 0 9px;line-height:1.5}.prop-market-empty{font-size:11px;opacity:.75;font-weight:700}.prop-markets .prop-filter{white-space:normal;max-width:100%;line-height:1.3;padding:11px 13px;min-height:42px}.prop-filter{flex:0 0 auto;border:1px solid #444259;border-radius:999px;background:#1e2232;color:#d0cddb;padding:9px 12px;font-size:12px;font-weight:800}.prop-filter.active{background:#e994d9;color:#170e1c;border-color:#e994d9}.prop-filter:disabled{opacity:.38;cursor:not-allowed}.prop-chooser input,.prop-options input,.prop-options select{background:#151724;border:1px solid #4b465d;border-radius:10px;color:#fff;padding:11px;width:100%;font:inherit}.prop-players{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,215px),1fr));gap:7px;max-height:242px;overflow:auto;padding:4px 3px 12px;margin-bottom:16px;border-bottom:1px solid #343347}.prop-player{display:flex;gap:8px;align-items:center;text-align:left;color:#fff;background:#1c1e2b;border:1px solid #343649;border-radius:12px;padding:8px}.prop-player.selected{border-color:#ec98dc;background:#36273e}.prop-player img,.prop-selected img{width:38px;height:38px;border-radius:50%;object-fit:cover;flex:none}.prop-avatar{width:38px;height:38px;border-radius:50%;background:#40314d;display:grid;place-items:center}.prop-player b{font-size:12px;display:block}.prop-player small{display:block;font-size:10px;color:#aeb0c5;margin-top:3px}.prop-results{background:#11131e;border:1px solid #38374a;border-radius:16px;padding:15px}.prop-selected{display:flex;gap:12px;align-items:center;margin-bottom:15px}.prop-selected img{width:54px;height:54px}.prop-selected h3{margin:3px 0}.prop-selected p{margin:3px 0}.prop-options{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 15px}.prop-options label{font-size:11px;color:#bbb6cf;flex:1;min-width:130px}.prop-options input,.prop-options select{margin-top:6px;display:block}.prop-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.prop-metric{border:1px solid #3b3b4d;background:#212131;border-radius:12px;padding:12px}.prop-metric span{font-size:10px;color:#bdb0cc;font-weight:850;display:block}.prop-metric strong{font-size:clamp(20px,3vw,29px);display:block;margin:6px 0;color:#f2b2e9}.prop-metric small{font-size:10px;color:#aba9be;line-height:1.4}.prop-chart{border:1px solid #37374a;border-radius:13px;padding:13px;margin:12px 0}.prop-chart-title{display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap;font-size:12px}.prop-bars{display:flex;align-items:flex-end;gap:7px;margin-top:15px;min-height:154px}.prop-bar-group{flex:1;text-align:center;min-width:0}.prop-bar-track{height:112px;display:flex;align-items:flex-end;justify-content:center;background:#191b29;border-radius:6px}.prop-bar{width:65%;border-radius:6px 6px 0 0;min-height:4px}.prop-bar.over{background:#73bedb}.prop-bar.under{background:#e994d9}.prop-bar-value{font-size:11px;color:#fff}.prop-bar-date{display:block;font-size:10px;color:#adadba;margin-top:6px}.prop-insight{background:#211a30;border-left:3px solid #f4a1e5;border-radius:8px;padding:12px;margin-bottom:10px}.prop-insight p{font-size:12px;line-height:1.55;color:#d9d3e7;margin:5px 0}@media(max-width:660px){.prop-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.prop-results{padding:10px}.prop-player{padding:7px}.prop-heading h3{font-size:19px}}
+
+/* V13 score intelligence — strong mobile hierarchy and readable historical input tables */
+.model-score{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:10px;align-items:center;margin:12px 0 16px;padding:20px 10px;border:1px solid #59405e;background:linear-gradient(125deg,#302036,#151725);border-radius:16px;text-align:center}
+.model-score>div{display:flex;min-width:0;flex-direction:column;gap:2px}
+.model-score small{font-size:11px;letter-spacing:.6px;font-weight:800;color:#cbbbd4}
+.model-score strong{font-size:clamp(41px,11vw,66px);font-weight:950;color:#f6b2e9;line-height:1.2;letter-spacing:-2px}
+.model-score>span{font-size:24px;font-weight:900;color:#a8a2b6}
+.model-percentage{font-size:clamp(24px,5vw,35px)!important;color:#f6b2e9!important;font-weight:950!important;line-height:1.1}
+.mini-history{display:grid;gap:9px}
+.mini-history>div{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #333548;padding-bottom:7px;font-size:12px}
+.mini-history>div:last-child{border-bottom:0;padding-bottom:0}
+.mini-history>div>span{color:#bfc1d4}
+.mini-history>div>b{white-space:nowrap;font-size:13px}
+@media(max-width:520px){.model-score{padding:17px 6px;gap:4px}.model-score small{font-size:9px}.model-score>span{font-size:19px}.intel-card{padding:12px}.players th,.players td{font-size:11px}}
+/* V13: fewer expensive mobile rerenders, stable selection and easier search */
+.prop-players{overscroll-behavior:contain;contain:layout paint;max-height:215px;-webkit-overflow-scrolling:touch}
+.prop-player{min-height:54px;content-visibility:auto;contain-intrinsic-size:auto 54px}
+.prop-list-hint{font-size:11px;color:#c3b5c9;margin:-7px 3px 14px}
+.game[data-selected="true"]{border-color:#ed91d9}
+.prop-selected{min-height:80px}
+@media(max-width:520px){.detail-head{scroll-margin-top:12px}.tabs button{padding:9px 11px}.prop-results{padding:12px}.prop-controls{scrollbar-width:none}.prop-players{max-height:200px}}
+@media(prefers-reduced-motion:reduce){.game{transition:none}}
+.research-strip{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 15px}.research-chip{font-size:11px;font-weight:750;color:#dec6ea;background:#30253b;border:1px solid #624b6c;border-radius:20px;padding:7px 10px}.research-chip.ok{background:#132a29;border-color:#2a5852;color:#a2f0d2}.research-chip.warn{background:#392d20;border-color:#6f5231;color:#ffd49b}.research-muted{font-size:11px;color:#a8adc2}.research-method{font-size:12px;color:#b4bdd1;line-height:1.6;border-left:3px solid #c97abf;background:#1c1b2d;border-radius:5px;padding:11px;margin-top:10px}.prop-metric strong{overflow-wrap:anywhere}@media(max-width:520px){.prop-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.research-chip{font-size:10px}.prop-player{touch-action:manipulation}}
+
+/* V15 research workspace */
+.market-banner{border:1px solid #634c77;border-radius:18px;background:linear-gradient(120deg,#282033,#171723);padding:15px;margin:12px 0}
+.odds-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:12px 0}
+.odds-box{padding:15px;border:1px solid #444056;border-radius:14px;background:#1d1c2b;min-width:0}
+.odds-box small{display:block;color:#a5aabd;font-size:11px;letter-spacing:.07em;margin-bottom:8px}
+.odds-box strong{font-size:25px;color:#f8e3f2;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.odds-box .hint{font-size:12px;line-height:1.5;color:#acb4ca;margin-top:7px}
+.odds-list{display:grid;gap:8px;margin:12px 0}
+.odds-row{display:grid;grid-template-columns:1.25fr .9fr .9fr .9fr;gap:7px;align-items:center;font-size:12px;border-bottom:1px solid #33334a;padding:10px 3px;font-variant-numeric:tabular-nums}
+.odds-row.heading{color:#aeb1ca;font-weight:700}
+.odds-row b{color:#f4e5f1}
+.odds-state{font-size:13px;color:#d7c1df;background:#282434;border:1px solid #514763;border-radius:13px;padding:14px;margin:12px 0;line-height:1.6}
+.odds-state a{color:#f0a8de}
+.history-table{overflow-x:auto}.history-table table{width:100%;min-width:450px;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.history-table th,.history-table td{padding:9px 8px;text-align:left;border-bottom:1px solid #343247;font-size:12px}
+.history-table th{color:#e9abd9;font-weight:700}
+.prop-odds{margin-top:13px;border-top:1px solid #3f3850;padding-top:13px}
+@media(max-width:520px){.odds-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.odds-box{padding:11px}.odds-box strong{font-size:19px}.odds-row{font-size:10px;gap:4px}.market-banner{padding:12px}}
+.sport-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.sport-grid button{background:#1d1d2d;border:1px solid #414155;border-radius:15px;color:#efa6df;font:inherit;font-weight:700;padding:16px 4px;min-height:86px;cursor:pointer}.sport-grid button span{display:block;font-size:27px;margin-bottom:8px}.sport-grid button[aria-pressed="true"]{border-color:#f09ddd;background:#39263d}.world-controls{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.world-controls>*{min-width:0;max-width:100%}.world-controls select,.world-controls input{background:#1d1d2d;color:#eee;border:1px solid #414155;border-radius:9px;padding:10px}#worldResults .item{margin:8px 0}#corePanel[hidden]{display:none!important}
+</style></head><body><div class="wrap"><header><div><div class="eyebrow">RENZO'S</div><div class="brand">SPORTS <b>LAB</b><span style="font-size:10px;color:#9698ab">  V30.0</span></div></div><span class="live" id="feedBadge">● CONNECTING</span></header><section class="hero"><div class="eyebrow">MULTI-SPORT • GAME INTELLIGENCE</div><h1>Every game.<br><span style="color:#f09ddd">One command center.</span></h1><p>Live NFL/NBA scores, historical team trends, matchup-specific estimates, researched player props, and optional verified bookmaker odds. Choose a sport below to open its dedicated workspace.</p></section><section class="panel"><div class="eyebrow">ALL SPORTS INTELLIGENCE</div><div id="sportGrid" class="sport-grid"><button type="button" data-sport="nba" aria-pressed="false"><span>🏀</span>NBA</button><button type="button" data-sport="nfl" aria-pressed="true"><span>🏈</span>NFL</button><button type="button" data-sport="soccer" aria-pressed="false"><span>⚽</span>Soccer</button><button type="button" data-sport="tennis" aria-pressed="false"><span>🎾</span>Tennis</button><button type="button" data-sport="mlb" aria-pressed="false"><span>⚾</span>MLB</button><button type="button" data-sport="nhl" aria-pressed="false"><span>🏒</span>NHL</button><button type="button" data-sport="ufc" aria-pressed="false"><span>🥊</span>UFC</button><button type="button" data-sport="ncaab" aria-pressed="false"><span>🏀</span>NCAAB</button><button type="button" data-sport="ncaaf" aria-pressed="false"><span>🏈</span>NCAAF</button></div></section><section id="worldPanel" class="panel hidden"><div class="eyebrow">WORLD SPORTS CENTER</div><h2 id="worldTitle">Schedule</h2><div class="world-controls"><select id="worldLeague" aria-label="Competition"></select><input type="date" id="worldDate" aria-label="Event date"><select id="worldRange" aria-label="Date range"><option value="1">Selected day</option><option value="7" selected>Next 7 days</option><option value="30">Next 30 days</option></select><button class="action" id="worldLoad">Refresh</button><button class="action" id="worldToday">Today</button><input id="worldSearch" type="search" placeholder="Search events" aria-label="Search events"><select id="worldFilter" aria-label="Event status"><option value="all">All events</option><option value="pre">Upcoming</option><option value="in">Live</option><option value="post">Final</option></select></div><p class="note" id="worldStatus" aria-live="polite"></p><div id="worldResults"></div><p class="note">ESPN scoreboard • expanded sports currently provide event coverage only. Sport-specific forecasts require validated historical feeds.</p></section><div id="corePanel"><div class="toolbar"><div class="seg" id="league"><button data-v="nfl" class="active">🏈 NFL</button><button data-v="nba">🏀 NBA</button></div><div class="seg" id="day"><button data-v="-1">Yesterday</button><button data-v="0" class="active">Today</button><button data-v="1">Tomorrow</button></div><button class="action" id="refresh">↻ Refresh</button><button class="action" id="healthCheck" type="button">◎ Feed health</button><label class="small muted" style="display:flex;align-items:center;gap:5px"><input type="checkbox" id="autoRefresh" checked> Live updates (60s)</label><span class="date" id="dateLabel"></span></div><div class="finder"><label for="pickDate">Choose date <input id="pickDate" type="date" aria-label="Choose game date"></label><input id="teamSearch" type="search" placeholder="Search teams or matchups" aria-label="Search teams"><select id="gameFilter" aria-label="Filter games"><option value="all">All games</option><option value="in">Live</option><option value="pre">Upcoming</option><option value="post">Final</option></select><button class="action" id="clearFilters">Clear filters</button></div><p id="feedHealth" class="resultnote hidden" aria-live="polite"></p><p id="filterInfo" class="resultnote" aria-live="polite"></p><div class="stats"><div class="stat"><span>GAMES ON SLATE</span><strong id="count">—</strong></div><div class="stat"><span>LIVE NOW</span><strong id="liveCount">—</strong></div><div class="stat"><span>LEAGUE</span><strong id="leagueStat">NFL</strong></div></div><div class="section-title"><h2 id="scheduleTitle">Game schedule</h2><span class="small muted" id="updated" aria-live="polite"></span></div><div id="games" class="games"><div class="empty">Loading games…</div></div><section id="detail" class="panel hidden"><div class="detail-head"><h2>Matchup center</h2><button class="close" id="close">✕ Close</button></div><div id="match"></div><div class="tabs" id="detailTabs"><button data-v="overview" class="active">Overview</button><button data-v="players">Players</button><button data-v="playerintel">Player Intel</button><button data-v="simulation">Simulator</button><button data-v="periods">Quarter Props</button><button data-v="playerperiod">Player Quarters</button><button data-v="projection">Projection</button><button data-v="odds">📈 Odds & Lines</button><button data-v="history">📚 History</button><button data-v="validation">📊 Validation</button><button data-v="audit">🧪 Model Audit</button><button data-v="injuries">Injuries</button><button data-v="props">🎯 Player Props</button><button data-v="liveintel">Live Intel</button></div><div id="detailBody"></div></section><section class="panel"><div class="eyebrow">INTELLIGENCE STATUS</div><h2>Built for the full picture</h2><div class="rows"><div class="item"><b>🏥 Injuries & availability</b><p>Team news and injuries require a verified data source. No invented statuses.</p><span class="warn small">Provider injury reports where available</span></div><div class="item"><b>🎯 Touchdowns & three-pointers</b><p>Historical game logs, customizable lines, recent hit rates and weighted estimates.</p><span class="good small">Season-log-based estimates • not calibrated betting odds</span></div><div class="item"><b>📈 Bookmaker lines</b><p>Actual moneyline, spread and total market consensus through a separately configured odds API key. Side-by-side comparison with the model, including no-vig probabilities.</p><span class="warn small">Optional paid/provider access • never invented</span></div><div class="item"><b>📊 Live scoreboard</b><p>Schedules and scores refresh periodically when Netlify's sports proxy is deployed and the feed responds.</p><span class="good small">Connected when feed available</span></div><div class="item"><b>🧠 Real-game matchup engine</b><p>Recent offense, opponent points allowed, home/away scoring and rest feed a unique projection for each matchup. Requires completed games.</p><span class="good small">12,000 experimental draws; separate walk-forward matchup audit • historical trends and consensus odds comparison when configured</span></div></div></section></div><p class="footer">Data: unofficial ESPN scoreboard, team schedules, roster and athlete game logs; optional bookmaker odds supplied by The Odds API through a server-side key. Unofficial, subject to availability and delays. No guarantee of real-time completeness. Not calibrated betting odds; no verified predictive accuracy or guarantees. Team logos and athlete photos belong to their respective owners.</p></div><script>
+'use strict';
+const $=id=>document.getElementById(id),escapeHtml=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let league='nfl',offset=0,events=[],selected=null,summary=null,tab='overview',busy=false,requestSerial=0;
+// Keep only simple UI preferences, never private information or whole ESPN responses.
+const UI_STORAGE_KEY='renzo-sports-v15-selection';
+let restoration=null;
+try{restoration=JSON.parse(sessionStorage.getItem(UI_STORAGE_KEY)||'null');if(restoration&&['nfl','nba'].includes(restoration.league)){league=restoration.league;offset=Number.isInteger(restoration.offset)?restoration.offset:0;}}catch(_e){}
+function saveSelection(){try{sessionStorage.setItem(UI_STORAGE_KEY,JSON.stringify({league,offset,event:selected?.id||null,tab,team:propState.team,player:propState.player,market:propState.market,window:propState.window,search:propState.search}));}catch(_e){}}
+function clearSelectionStorage(){try{sessionStorage.removeItem(UI_STORAGE_KEY)}catch(_e){}}
+const timezone=Intl.DateTimeFormat().resolvedOptions().timeZone||'America/Boise';
+function dateFor(n){let d=new Date();d.setHours(12,0,0,0);d.setDate(d.getDate()+n);return d}
+function dateKey(n){let d=dateFor(n);return `${d.getFullYear()}${String(d.getMonth()+1).padStart(2,'0')}${String(d.getDate()).padStart(2,'0')}`}
+function fmtDate(d){return new Intl.DateTimeFormat('en-US',{weekday:'long',month:'short',day:'numeric'}).format(d)}
+function fmtTime(s){if(!s)return 'Time TBD';return new Intl.DateTimeFormat('en-US',{hour:'numeric',minute:'2-digit',timeZone:timezone}).format(new Date(s))}
+function img(url,alt){return url?`<img loading="lazy" src="${escapeHtml(url)}" alt="${escapeHtml(alt)}" onerror="this.style.visibility='hidden'">`:''}
+function competitors(e){return e.competitions?.[0]?.competitors||[]}
+function teams(e){let c=competitors(e);return [c.find(x=>x.homeAway==='away')||c[0]||{},c.find(x=>x.homeAway==='home')||c[1]||{}]}
+function logo(c){return c.team?.logo||c.team?.logos?.[0]?.href||''}
+function status(e){return e.status?.type?.shortDetail||e.status?.type?.description||'Scheduled'}
+function state(e){return e.status?.type?.state||'pre'}
+function card(e){let [a,h]=teams(e);return `<button class="game" data-selected="${selected?.id===e.id}" data-id="${escapeHtml(e.id)}"><div class="top"><span>${escapeHtml(e.season?.type?.abbreviation||league.toUpperCase())} • ${escapeHtml(fmtTime(e.date))}</span><span class="pill">${escapeHtml(state(e)==='in'?'LIVE':state(e)==='post'?'FINAL':'UPCOMING')}</span></div>${[a,h].map(c=>`<div class="team">${img(logo(c),c.team?.displayName||'Team')}<div class="name">${escapeHtml(c.team?.displayName||'TBD')}</div><div class="score">${escapeHtml(c.score??'—')}</div></div>`).join('')}<div class="status">${escapeHtml(status(e))}</div></button>`}
+const inflightJson=new Map();
+async function getJson(url){
+ if(inflightJson.has(url))return inflightJson.get(url);
+ const job=(async()=>{const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),13000);
+  try{const r=await fetch(url,{cache:'no-store',signal:controller.signal});if(!r.ok){let detail='';try{detail=(await r.json()).detail||''}catch(_){}throw new Error(`Sports feed ${r.status}${detail?' • '+detail:''}`)}return await r.json()}
+  catch(e){if(e.name==='AbortError')throw new Error('Sports feed timed out');throw e}
+  finally{clearTimeout(timeout)}
+ })();inflightJson.set(url,job);try{return await job}finally{inflightJson.delete(url)}
+}
+function filteredGames(){const q=$('teamSearch').value.trim().toLowerCase(),f=$('gameFilter').value;return events.filter(e=>{const [a,h]=teams(e);const names=[a.team?.displayName,a.team?.abbreviation,h.team?.displayName,h.team?.abbreviation].filter(Boolean).join(' ').toLowerCase();return (!q||names.includes(q))&&(f==='all'||state(e)===f)})}
+function renderGames(){const shown=filteredGames();$('games').innerHTML=shown.length?shown.map(card).join(''):'<div class="empty">No matching games for these filters. Try clearing the search or changing the date.</div>';$('filterInfo').textContent=`Showing ${shown.length} of ${events.length} games • ${fmtDate(dateFor(offset))}`}
+function syncDate(){const d=dateFor(offset);$('pickDate').value=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;document.querySelectorAll('#day button').forEach(b=>b.classList.toggle('active',Number(b.dataset.v)===offset))}
+// Background updates must never remove the game panel, close the selection,
+// or destroy currently focused inputs. Only the scoreboard and visible score text change.
+function refreshGameCards(){
+ const shown=filteredGames(),cards=[...$('games').querySelectorAll('button.game')];
+ if(cards.length!==shown.length||cards.some((c,i)=>c.dataset.id!==String(shown[i].id))){renderGames();return}
+ cards.forEach((node,i)=>{const e=shown[i],pair=teams(e),scores=node.querySelectorAll('.team .score');
+  scores.forEach((el,j)=>{const v=String(pair[j].score??'—');if(el.textContent!==v)el.textContent=v});
+  const st=node.querySelector('.status'),p=node.querySelector('.pill');if(st)st.textContent=status(e);
+  if(p)p.textContent=state(e)==='in'?'LIVE':state(e)==='post'?'FINAL':'UPCOMING';
+  node.dataset.selected=String(selected?.id===e.id);
+ });
+ $('filterInfo').textContent=`Showing ${shown.length} of ${events.length} games • ${fmtDate(dateFor(offset))}`;
+}
+function updateMatchHeader(){
+ if(!selected||$('detail').classList.contains('hidden'))return;
+ let [a,h]=teams(selected);
+ const root=$('match'),cols=root.querySelectorAll('.match > div');
+ if(cols.length===2){const vals=[a,h];cols.forEach((el,i)=>{const name=el.querySelector('strong'),score=el.querySelector('.match-score');if(name)name.textContent=vals[i].team?.displayName||'Team';if(score)score.textContent=vals[i].score??'—'})}
+}
+async function load(background=false){
+ syncDate();const serial=++requestSerial;busy=true;
+ if(!background){$('refresh').disabled=true;$('games').innerHTML='<div class="empty">Loading games…</div>';$('feedBadge').textContent='● CONNECTING';$('feedBadge').style.color='#f5c879'}
+ $('dateLabel').textContent=fmtDate(dateFor(offset));$('leagueStat').textContent=league.toUpperCase();
+ try{
+  const d=await getJson(`/.netlify/functions/sports?league=${league}&date=${dateKey(offset)}`);
+  if(serial!==requestSerial)return;
+  const incoming=Array.isArray(d.events)?d.events:[];
+  // An empty or partial background response should not destroy an opened selection.
+  if(background&&incoming.length===0&&events.length)throw new Error('Provider returned no games; keeping existing schedule');
+  events=incoming;
+  $('count').textContent=events.length;$('liveCount').textContent=events.filter(x=>state(x)==='in').length;
+  if(background)refreshGameCards();else renderGames();
+  $('feedBadge').textContent='● FEED CONNECTED';$('feedBadge').style.color='#7ce6b8';
+  $('updated').textContent='Feed updated '+new Date().toLocaleTimeString([],{hour:'numeric',minute:'2-digit'});
+  if(selected){const newer=events.find(e=>e.id===selected.id);if(newer){const previous=JSON.stringify({scores:teams(selected).map(x=>x.score),clock:selected.status?.displayClock,period:selected.status?.period,status:state(selected)});selected=newer;updateMatchHeader();const changed=JSON.stringify({scores:teams(selected).map(x=>x.score),clock:selected.status?.displayClock,period:selected.status?.period,status:state(selected)})!==previous;if(changed&&tab==='liveintel'&&!document.activeElement?.matches('input,select,textarea'))renderDetail()}}
+  else if(!background&&restoration?.event){const saved=events.find(e=>e.id===restoration.event);if(saved){restoreGame(saved);restoration=null}}
+ }catch(err){
+  if(serial!==requestSerial)return;
+  $('feedBadge').textContent='● FEED UNAVAILABLE';$('feedBadge').style.color='#ffc67b';
+  $('updated').textContent='Feed unavailable • existing selection preserved';
+  if(!background){events=[];$('count').textContent='—';$('liveCount').textContent='—';$('filterInfo').textContent='Data connection unavailable';$('games').innerHTML=`<div class="empty">Unable to load games: ${escapeHtml(err.message)}. Verify the Netlify Functions deployment and tap Refresh.</div>`}
+ }finally{if(serial===requestSerial){busy=false;$('refresh').disabled=false}}
+}
+function closeDetail(){resetProps();resetPropOdds();resetPrediction();selected=null;summary=null;summaryError='';$('detail').classList.add('hidden');saveSelection()}
+function overview(){let [a,h]=teams(selected),c=selected.competitions?.[0]||{};let venue=c.venue?.fullName||'Venue not supplied';return `<div class="rows"><div class="item"><b>Match status</b><p>${escapeHtml(status(selected))}</p></div><div class="item"><b>Kickoff / tipoff</b><p>${escapeHtml(fmtTime(selected.date))} (${escapeHtml(timezone)})</p></div><div class="item"><b>Venue</b><p>${escapeHtml(venue)}</p></div><div class="item"><b>Team records</b><p>${escapeHtml(a.records?.[0]?.summary||'Not supplied')} • ${escapeHtml(h.records?.[0]?.summary||'Not supplied')}</p></div></div><p class="note">Team advantages, official injuries, player availability and matchup-specific predictive probabilities require additional validated feeds. We won't label unverified estimates as live intelligence.</p>`}
+function playerRows(){let data=summary?.boxscore?.players||[];if(!data.length)return '<div class="empty">Player box-score data is not available yet for this game. For upcoming games, lineups may not be published.</div>';return data.map(t=>{let groups=t.statistics||[];return `<div class="item"><b>${escapeHtml(t.team?.displayName||'Players')}</b>${groups.map(g=>{let labels=g.labels||[],athletes=g.athletes||[];return `<h3 style="font-size:13px;color:#f09ddd">${escapeHtml(g.name||'Statistics')}</h3><div class="scroll"><table class="players"><thead><tr><th>Player</th>${labels.map(x=>`<th>${escapeHtml(x)}</th>`).join('')}</tr></thead><tbody>${athletes.slice(0,30).map(p=>`<tr><td>${img(p.athlete?.headshot?.href,p.athlete?.displayName||'')} ${escapeHtml(p.athlete?.displayName||'Unknown')}</td>${(p.stats||[]).map(x=>`<td>${escapeHtml(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}).join('')}</div>`}).join('')}
+/* Renzo Sports Lab V16: transparent matchup-specific research model. Requires actual completed ESPN team games. */
+function average(xs){return xs.length?xs.reduce((a,b)=>a+b,0)/xs.length:null}
+function recentAverage(rows,key,limit=6){const r=rows.slice(0,limit);if(!r.length)return null;let weight=0,sum=0;r.forEach((g,i)=>{const w=Math.pow(.79,i);sum+=g[key]*w;weight+=w});return sum/weight}
+function stdev(xs){if(xs.length<2)return null;const m=average(xs);return Math.sqrt(xs.reduce((s,x)=>s+(x-m)**2,0)/(xs.length-1))}
+function safeBound(n,min,max){return Math.max(min,Math.min(max,n))}
+function completedBefore(data,cutoff,skipId){return (data?.games||[]).filter(g=>g&&g.id!==String(skipId)&&Number.isFinite(Date.parse(g.date))&&Date.parse(g.date)<cutoff&&Number.isFinite(g.for)&&Number.isFinite(g.against)&&g.for>=0&&g.against>=0).sort((x,y)=>Date.parse(y.date)-Date.parse(x.date))}
+function teamMetrics(rows){
+ const pf=average(rows.map(x=>x.for)),pa=average(rows.map(x=>x.against));
+ return {n:rows.length,pf,pa,net:pf-pa,recentPF:recentAverage(rows,'for'),recentPA:recentAverage(rows,'against'),recentNet:recentAverage(rows,'for')-recentAverage(rows,'against'),sdFor:stdev(rows.slice(0,12).map(x=>x.for)),sdAgainst:stdev(rows.slice(0,12).map(x=>x.against)),last5:rows.slice(0,5),lastDate:rows[0]?.date||null,rows};
+}
+function sideAttack(stats,side){const base=.48*stats.pf+.52*stats.recentPF,split=stats.rows.filter(g=>g.home===side).slice(0,8);return split.length>=3?.83*base+.17*average(split.map(g=>g.for)):base}
+function sideAllowed(stats,side){const base=.48*stats.pa+.52*stats.recentPA,split=stats.rows.filter(g=>g.home===side).slice(0,8);return split.length>=3?.83*base+.17*average(split.map(g=>g.against)):base}
+function seasonRest(stats,cutoff){if(!stats.lastDate)return null;return (cutoff-Date.parse(stats.lastDate))/86400000-1}
+function readPeriods(rows,own,kind){
+ const ranges={q1:[0,1],q2:[1,2],q3:[2,3],q4:[3,4],half:[0,2],half2:[2,4]};const [start,end]=ranges[kind]||ranges.q1;
+ return rows.flatMap(g=>{const v=g[own?'quarters':'oppQuarters'];const split=Array.isArray(v)?v.slice(start,end):[];return split.length===end-start&&split.every(Number.isFinite)?[{...g,periodValue:split.reduce((a,b)=>a+b,0)}]:[]});
+}
+function periodProjection(ours,theirs,kind){
+ const scoring=readPeriods(ours.rows,true,kind),conceding=readPeriods(theirs.rows,false,kind);
+ if(scoring.length<3||conceding.length<3)return null;
+ const s=recentAverage(scoring,'periodValue'),c=recentAverage(conceding,'periodValue');return Math.max(0,.56*s+.44*c);
+}
+function matchupProjection(leagueKey,awayData,homeData,cutoff,eventId){
+ const away=teamMetrics(completedBefore(awayData,cutoff,eventId)),home=teamMetrics(completedBefore(homeData,cutoff,eventId));
+ if(away.n<4||home.n<4){
+  const diag=(data)=>{const d=data?.diagnostics||{};return `${data?.reportedEvents??'?'} reported, ${d.matchingTeam??'?'} team matches, ${d.regular??'?'} regular, ${d.final??'?'} finals, ${d.withScores??'?'} scored`};
+  return {ok:false,away,home,reason:`Need 4 completed games per team; found away ${away.n}, home ${home.n}. ESPN feed diagnostics — Away: ${diag(awayData)}; Home: ${diag(homeData)}. No fabricated scores. Open the data-feed test below if this looks wrong.`,awaySource:awayData?.source,homeSource:homeData?.source};
+ }
+ const nfl=leagueKey==='nfl',leaguePrior=nfl?22.5:112.5,edge=nfl?1.25:1.8;
+ // Regularized offense/defense estimates: avoid treating four games like a full season.
+ // Priors are explicitly fixed research baselines, NOT calibrated league estimates.
+ // Venue effects get smaller weight when venue-specific samples are sparse.
+ const priorGames=nfl?6:10;
+ const regularize=(v,n)=>leaguePrior+(v-leaguePrior)*n/(n+priorGames);
+ const aOff=regularize(sideAttack(away,false),away.n),hOff=regularize(sideAttack(home,true),home.n);
+ const aDef=regularize(sideAllowed(away,false),away.n),hDef=regularize(sideAllowed(home,true),home.n);
+ let a=.56*aOff+.44*hDef, h=.56*hOff+.44*aDef;
+ // Recent margin enters only modestly since it overlaps with observed scoring.
+ const formDiff=safeBound(away.recentNet-home.recentNet,-25,25);
+ a+=.035*formDiff-edge;h-=.035*formDiff-edge;
+ const awayRest=seasonRest(away,cutoff),homeRest=seasonRest(home,cutoff);
+ let restDiff=0;
+ if(nfl){
+   if(awayRest!==null&&awayRest<5)a-=.7;
+   if(homeRest!==null&&homeRest<5)h-=.7;
+ }else if(awayRest!==null&&homeRest!==null){
+   // A back-to-back is zero full rest days; shorter rest is a modest scoring penalty.
+   const aB2B=awayRest<.5?1:0,hB2B=homeRest<.5?1:0;
+   a-=aB2B*1.25;h-=hB2B*1.25;
+   restDiff=safeBound(awayRest-homeRest,-3,3);
+   a+=.25*restDiff;h-=.25*restDiff;
+ }
+ const low=nfl?4:70,high=nfl?60:165;
+ a=safeBound(a,low,high);h=safeBound(h,low,high);
+ const sdA=safeBound(Math.sqrt(((away.sdFor||0)**2+(home.sdAgainst||0)**2)/2)|| (nfl?9:13),nfl?7:9,nfl?18:25);
+ const sdH=safeBound(Math.sqrt(((home.sdFor||0)**2+(away.sdAgainst||0)**2)/2)|| (nfl?9:13),nfl?7:9,nfl?18:25);
+ return {ok:true,away,home,offenseAway:aOff,offenseHome:hOff,defenseAway:aDef,defenseHome:hDef,regularizationGames:priorGames,awayScore:a,homeScore:h,sdA,sdH,awayRest,homeRest,restDiff,q1Away:periodProjection(away,home,'q1'),q1Home:periodProjection(home,away,'q1'),halfAway:periodProjection(away,home,'half'),halfHome:periodProjection(home,away,'half'),leaguePrior};
+}
+function seededRandom(seedText){let x=2166136261;for(const ch of String(seedText)){x^=ch.charCodeAt(0);x=Math.imul(x,16777619)}return ()=>{x^=x<<13;x^=x>>>17;x^=x<<5;return (x>>>0)/4294967296}}
+function seededNormal(random){return Math.sqrt(-2*Math.log(Math.max(1e-9,random())))*Math.cos(2*Math.PI*random())}
+const scoreSimulationCache=new Map();
+function modelSimulation(awayScore,homeScore,sdA,sdH,seed){
+ const key=[awayScore,homeScore,sdA,sdH,seed].join(':');
+ if(scoreSimulationCache.has(key))return scoreSimulationCache.get(key);
+ const rand=seededRandom(seed),iterations=12000;let aWins=0,hWins=0,ties=0;
+ for(let i=0;i<iterations;i++){
+  const a=Math.max(0,Math.round(awayScore+seededNormal(rand)*sdA));
+  const h=Math.max(0,Math.round(homeScore+seededNormal(rand)*sdH));
+  if(a>h)aWins++;else if(h>a)hWins++;else ties++;
+ }
+ const result={away:aWins/iterations,home:hWins/iterations,ties:ties/iterations,iterations};
+ if(scoreSimulationCache.size>70)scoreSimulationCache.clear();scoreSimulationCache.set(key,result);return result;
+}
+function liveGameProjection(selectedGame,leagueKey,base){
+ if(!base?.ok||selectedGame?.status?.type?.state!=='in')return null;
+ const rivals=selectedGame.competitions?.[0]?.competitors||[];
+ const a=rivals.find(x=>x.homeAway==='away'),h=rivals.find(x=>x.homeAway==='home');
+ const actualAway=Number(a?.score),actualHome=Number(h?.score);
+ if(a?.score===null||h?.score===null||a?.score===''||h?.score===''||!Number.isFinite(actualAway)||!Number.isFinite(actualHome))return null;
+ const period=Number(selectedGame.status?.period||0),length=leagueKey==='nfl'?15:12;
+ if(period<1||period>4)return null;
+ const clock=String(selectedGame.status?.displayClock||''),match=/^(\d+):(\d{1,2})$/.exec(clock);
+ if(!match)return null;
+ const mins=Number(match[1])+Number(match[2])/60;
+ if(mins<0||mins>length)return null;
+ const elapsed=safeBound((period-1+(length-mins)/length)/4,0,1);
+ if(elapsed<.08)return null;
+ function one(actual,mean){
+  const observedPace=actual/Math.max(1,mean*elapsed);
+  const influence=Math.min(.32,.43*elapsed);
+  const paceFactor=1+influence*(safeBound(observedPace,.55,1.55)-1);
+  return Math.max(actual,actual+mean*(1-elapsed)*paceFactor);
+ }
+ return {awayScore:one(actualAway,base.awayScore),homeScore:one(actualHome,base.homeScore),elapsed,actualAway,actualHome,period,clock};
+}
+
+// Fetch historical, *completed* games. Never substitute constant points if the feed fails.
+const predictionScheduleCache=new Map();
+let predictionState={key:null,loading:false,result:null,error:''};
+function predictionKey(){return selected?`${league}:${selected.id}:${gameSeason()}`:null}
+function resetPrediction(){predictionState={key:null,loading:false,result:null,error:''}}
+async function teamSchedule(id,year,requestedLeague){
+ const key=`${requestedLeague}:${id}:${year}`, cached=predictionScheduleCache.get(key);
+ if(cached&&Date.now()-cached.saved<180000)return cached.data;
+ const data=await getJson(`/.netlify/functions/sports?league=${requestedLeague}&schedule=${encodeURIComponent(id)}&season=${year}`);
+ if(!Array.isArray(data.games))throw new Error('Unrecognized team schedule response');
+ predictionScheduleCache.set(key,{data,saved:Date.now()});
+ if(predictionScheduleCache.size>100)predictionScheduleCache.clear();
+ return data;
+}
+async function ensurePrediction(){
+ if(!selected)return;
+ const key=predictionKey();
+ if(predictionState.key===key&&(predictionState.loading||predictionState.result||predictionState.error))return;
+ const [away,home]=teams(selected),awayId=away.team?.id,homeId=home.team?.id;
+ if(!awayId||!homeId){predictionState={key,loading:false,result:null,error:'Missing ESPN team identifiers for this matchup.'};return}
+ predictionState={key,loading:true,result:null,error:''};
+ const reqLeague=league,reqEvent=selected.id,season=gameSeason(),when=Date.parse(selected.date);
+ try{
+  if(!Number.isFinite(when))throw new Error('Invalid matchup date; projections need a verified kickoff/tipoff');
+  const [awayData,homeData]=await Promise.all([teamSchedule(awayId,season,reqLeague),teamSchedule(homeId,season,reqLeague)]);
+  const result=matchupProjection(reqLeague,awayData,homeData,when,reqEvent);
+  if(result.ok)result.matchupAudit=walkForwardMatchupAudit(reqLeague,awayData,homeData,when,reqEvent);
+  if(predictionKey()!==key)return;
+  predictionState={key,loading:false,result,error:''};
+ }catch(e){if(predictionKey()!==key)return;predictionState={key,loading:false,result:null,error:e.message}}
+ finally{if(predictionKey()===key&&['projection','simulation','overview','liveintel','history','audit','validation','periods'].includes(tab))renderDetail()}
+}
+function predictionStatus(){
+ if(predictionState.key!==predictionKey()){queueMicrotask(ensurePrediction);return '<div class="empty">Fetching actual completed games for both teams…</div>'}
+ if(predictionState.loading)return '<div class="empty">Calculating matchup statistics from ESPN completed game results…</div>';
+ if(predictionState.error)return `<div class="alert">Historical data feed failed: ${escapeHtml(predictionState.error)}. No score was invented. <button class="action" type="button" id="retryPrediction">Retry feed</button></div>`;
+ if(predictionState.result&&!predictionState.result.ok){const [a,h]=teams(selected),year=gameSeason();
+  const query=id=>`/.netlify/functions/sports?league=${league}&schedule=${encodeURIComponent(id)}&season=${year}`;
+  return `<div class="alert">${escapeHtml(predictionState.result.reason)}</div><div class="research-strip"><a class="research-chip" href="${query(a.team?.id)}" target="_blank" rel="noopener noreferrer">Inspect away game feed</a><a class="research-chip" href="${query(h.team?.id)}" target="_blank" rel="noopener noreferrer">Inspect home game feed</a></div>`;
+ }
+ if(!predictionState.result){queueMicrotask(ensurePrediction);return '<div class="empty">Building matchup-specific model…</div>'}
+ return '';
+}
+function modelMeans(){const m=predictionState.key===predictionKey()?predictionState.result:null;return m?.ok?[m.awayScore,m.homeScore]:null}
+function num1(v){return Number(v).toFixed(1)}
+function lastGameMarkup(label,team){return `<div class="item"><b>${escapeHtml(label)} • last ${team.n<5?team.n:5} games</b><div class="mini-history">${team.last5.map(g=>`<div><span>${escapeHtml(new Date(g.date).toLocaleDateString('en-US',{month:'short',day:'numeric',timeZone:'UTC'}))} ${g.home?'vs':'@'} ${escapeHtml(g.opponent)}</span><b class="${g.for>g.against?'good':g.for<g.against?'warn':''}">${g.for===g.against?'T':g.for>g.against?'W':'L'} ${g.for}–${g.against}</b></div>`).join('')}</div></div>`}
+function projectionView(){
+ const statusHtml=predictionStatus();
+ if(statusHtml)return `<div class="eyebrow">V15 • MATCHUP INTELLIGENCE</div><h3>Real-game score model</h3>${statusHtml}`;
+ const m=predictionState.result,[away,home]=teams(selected),aLabel=away.team?.abbreviation||'Away',hLabel=home.team?.abbreviation||'Home';
+ const sample=Math.min(m.away.n,m.home.n),sampleMessage=sample<7?'LOW COVERAGE':sample<12?'MODERATE COVERAGE':'MORE HISTORY';
+ const awayTrend=m.away.recentPF-m.away.pf,homeTrend=m.home.recentPF-m.home.pf;
+ const live=liveGameProjection(selected,league,m),actual=state(selected)==='post';
+ const awayProjected=live?live.awayScore:m.awayScore,homeProjected=live?live.homeScore:m.homeScore;
+ const uncertainty=live?Math.max(.2,1-live.elapsed):1;
+ const sim=modelSimulation(awayProjected,homeProjected,m.sdA*Math.sqrt(uncertainty),m.sdH*Math.sqrt(uncertainty),`${league}:${selected.id}:${live?'live:'+Math.round(live.elapsed*100)+':'+live.actualAway+':'+live.actualHome:'pre'}`);
+ const periodRows=[['1st quarter','q1'],['2nd quarter','q2'],['3rd quarter','q3'],['4th quarter','q4'],['1st half','half'],['2nd half','half2']].map(([label,k])=>[label,periodProjection(m.away,m.home,k),periodProjection(m.home,m.away,k)]);
+ const periodHtml=periodRows.map(([label,aa,hh])=>aa===null||hh===null?`<tr><td>${label}</td><td colspan="4">Insufficient completed-game splits</td></tr>`:`<tr><td>${label}</td><td>${num1(aa)}</td><td>${num1(hh)}</td><td>${num1(aa+hh)}</td><td>${num1(hh-aa)}</td></tr>`).join('');
+ const note=live?`Live update at Q${live.period} ${escapeHtml(live.clock)}. Uses the actual score ${live.actualAway}–${live.actualHome} plus matchup prior for remaining regulation time.`:actual?'This matchup is final. The model excludes its own result and uses only earlier games; see reported final score in the header.':'Pregame model based only on games played before this matchup.';
+ return `<div class="prop-heading"><div><div class="eyebrow">V15 • REAL-GAME MODEL</div><h3>${escapeHtml(away.team?.displayName||aLabel)} vs ${escapeHtml(home.team?.displayName||hLabel)}</h3><p class="note">${note}</p></div><span class="tag">${m.away.n} + ${m.home.n} completed games</span></div>
+ <div class="research-strip"><span class="research-chip ${sample<7?'warn':'ok'}">${sampleMessage} • ${m.away.n}/${m.home.n} games</span><span class="research-chip">${escapeHtml(aLabel)} scoring trend ${awayTrend>=0?'+':''}${num1(awayTrend)}</span><span class="research-chip">${escapeHtml(hLabel)} scoring trend ${homeTrend>=0?'+':''}${num1(homeTrend)}</span></div>
+ <div class="model-score"><div><small>${escapeHtml(aLabel)} • AWAY</small><strong>${Math.round(awayProjected)}</strong><small>Est. ${num1(awayProjected)} pts</small></div><span>–</span><div><small>${escapeHtml(hLabel)} • HOME</small><strong>${Math.round(homeProjected)}</strong><small>Est. ${num1(homeProjected)} pts</small></div></div>
+ <div class="intel-grid"><div class="intel-card"><h3>${escapeHtml(aLabel)} model win share</h3><p class="model-percentage">${(100*sim.away).toFixed(1)}%</p><div class="meter"><div style="width:${(100*sim.away).toFixed(1)}%"></div></div></div><div class="intel-card"><h3>${escapeHtml(hLabel)} model win share</h3><p class="model-percentage">${(100*sim.home).toFixed(1)}%</p><div class="meter"><div style="width:${(100*sim.home).toFixed(1)}%"></div></div></div></div>
+ <p class="research-method">Evidence rating measures available historical samples, <b>not prediction accuracy.</b> V15 additionally shrinks short histories toward an explicitly approximate league scoring baseline to reduce extreme small-sample forecasts. This is a hand-tuned model, not a trained/calibrated one. Player availability, travel, lineup minutes and play-by-play pace are not verified inputs.</p>
+ <button class="action" id="copyForecast" type="button">Copy matchup research snapshot</button> <span class="note">Share the data date, observed inputs, forecast, and limitations—not a guaranteed pick.</span>
+ <p class="note warn">12,000 deterministic simulation draws • regulation only • ${(sim.ties*100).toFixed(1)}% simulated ties. These are UNCALIBRATED regulation-only simulation shares, not verified odds or demonstrated predictive accuracy. Approximate score variation is based on each team's recent game-to-game scores.</p>
+ <div class="scroll"><table class="players"><thead><tr><th>Actual completed-game inputs</th><th>${escapeHtml(aLabel)}</th><th>${escapeHtml(hLabel)}</th></tr></thead><tbody>
+ <tr><td>Games in season before matchup</td><td>${m.away.n}</td><td>${m.home.n}</td></tr>
+ <tr><td>Scored / game</td><td>${num1(m.away.pf)}</td><td>${num1(m.home.pf)}</td></tr>
+ <tr><td>Allowed / game</td><td>${num1(m.away.pa)}</td><td>${num1(m.home.pa)}</td></tr>
+ <tr><td>Recent weighted points scored</td><td>${num1(m.away.recentPF)}</td><td>${num1(m.home.recentPF)}</td></tr>
+ <tr><td>Recent weighted points allowed</td><td>${num1(m.away.recentPA)}</td><td>${num1(m.home.recentPA)}</td></tr>
+ <tr><td>Recent weighted point margin</td><td>${num1(m.away.recentNet)}</td><td>${num1(m.home.recentNet)}</td></tr>
+ <tr><td>Full rest days before matchup</td><td>${m.awayRest===null?'—':Math.max(0,num1(m.awayRest))}</td><td>${m.homeRest===null?'—':Math.max(0,num1(m.homeRest))}</td></tr>
+ <tr><td>Illustrative score band (±1 score SD; not calibrated)</td><td>${Math.max(0,Math.round(awayProjected-m.sdA*Math.sqrt(uncertainty)))}–${Math.round(awayProjected+m.sdA*Math.sqrt(uncertainty))}</td><td>${Math.max(0,Math.round(homeProjected-m.sdH*Math.sqrt(uncertainty)))}–${Math.round(homeProjected+m.sdH*Math.sqrt(uncertainty))}</td></tr>
+ </tbody></table></div>
+ <div class="item" style="margin-top:14px"><b>All quarters & halves • pregame historical splits</b><div class="scroll"><table class="players"><thead><tr><th>Period</th><th>${escapeHtml(aLabel)}</th><th>${escapeHtml(hLabel)}</th><th>Total</th><th>Home margin</th></tr></thead><tbody>${periodHtml}<tr><td>Final (matchup model)</td><td>${Math.round(awayProjected)}</td><td>${Math.round(homeProjected)}</td><td>${num1(awayProjected+homeProjected)}</td><td>${num1(homeProjected-awayProjected)}</td></tr></tbody></table></div><p class="note">Period rows come from separately reported historical period scores; they are NOT fractions of the projected final. A missing split is left blank rather than guessed.</p></div>
+ <div class="rows" style="margin-top:12px">${lastGameMarkup(aLabel,m.away)}${lastGameMarkup(hLabel,m.home)}</div>
+ <p class="note">Source: ESPN completed regular-season team schedules (${gameSeason()} season), retrieved through the Netlify Function. Opponent scoring defense, scoring form, home/away splits, home venue and rest are included when available. Team rosters and injuries are NOT quantified because confirmed availability, minutes and playing-time data are not in this model. Schedules can be delayed or incomplete; estimates are research-only and have not been backtested/calibrated.</p>`;
+}
+function autoFillSim(){const means=modelMeans();if(!means){$('simResult').textContent='The model needs at least four completed team games and a working history feed. We cannot insert generic team scores.';return;}$('expA').value=means[0].toFixed(1);$('expH').value=means[1].toFixed(1);$('simResult').textContent='Copied matchup-specific expectations based on historical results. You can edit either number before simulating.';}
+function simView(){
+ const [a,h]=teams(selected),means=modelMeans(),notice=predictionStatus();
+ return `<p class="note">20,000-run experimental simulator. Each team gets separate inputs derived from its actual scoring, the opponent's points allowed, and recent form. Edit scores to test a scenario. No invented default scores.</p>${notice}<div class="simrow"><label>${escapeHtml(a.team?.displayName||'Away')} expected points<input id="expA" type="number" min="0" max="200" step=".5" placeholder="Load model" value="${means?means[0].toFixed(1):''}"></label><label>${escapeHtml(h.team?.displayName||'Home')} expected points<input id="expH" type="number" min="0" max="200" step=".5" placeholder="Load model" value="${means?means[1].toFixed(1):''}"></label></div><button class="run" id="autoSim" type="button">Use real-game model</button> <button class="run" id="runSim" type="button">Run 20,000 simulations</button><div id="simResult" class="note"></div>`;
+}
+function simulate(){
+ if($('expA').value===''||$('expH').value===''){$('simResult').textContent='Enter both expected scores or load the historical model first.';return}
+ const a=Number($('expA').value),h=Number($('expH').value);
+ if(!Number.isFinite(a)||!Number.isFinite(h)||a<0||h<0||a>200||h>200){$('simResult').textContent='Enter expected points between 0 and 200.';return}
+ const m=predictionState.result?.ok?predictionState.result:null,sdA=m?.sdA||(league==='nfl'?9:14),sdH=m?.sdH||(league==='nfl'?9:14);
+ const rand=seededRandom(`manual:${selected.id}:${a}:${h}`);let aw=0,hw=0,t=0,sa=0,sh=0,n=20000;
+ for(let i=0;i<n;i++){const x=Math.max(0,Math.round(a+seededNormal(rand)*sdA)),y=Math.max(0,Math.round(h+seededNormal(rand)*sdH));sa+=x;sh+=y;if(x>y)aw++;else if(y>x)hw++;else t++}
+ const [ac,hc]=teams(selected);
+ $('simResult').innerHTML=`<div class="rows"><div class="item"><b>${escapeHtml(ac.team?.abbreviation||'Away')}</b><p>Mean simulated points: ${(sa/n).toFixed(1)}</p><p>Model win share: ${(aw/n*100).toFixed(1)}%</p></div><div class="item"><b>${escapeHtml(hc.team?.abbreviation||'Home')}</b><p>Mean simulated points: ${(sh/n).toFixed(1)}</p><p>Model win share: ${(hw/n*100).toFixed(1)}%</p></div></div><p class="note">Simulated regulation ties: ${(t/n*100).toFixed(1)}%. Not calibrated sportsbook odds. ${m?'Score variation derived from reported team results.':'Default score variation is a fixed unvalidated assumption because historical data is unavailable.'}</p><div class="progress"><div style="width:${(aw/n*100).toFixed(1)}%"></div></div>`;
+}
+
+function playerIntelView(){
+ if(!summary)return '<div class="empty">Loading available player data…</div>';
+ const leaders=summary.leaders||[];
+ const blocks=leaders.flatMap(t=>(t.leaders||[]).map(g=>({team:t.team?.displayName||'Team',group:g.displayName||g.name||'Leader',players:g.leaders||[]})));
+ const box=summary.boxscore?.players||[];
+ let output='<p class="note">Verified player statistics supplied by the ESPN game summary. These are actual reported numbers or historical leaders, NOT projected touchdowns or three-pointers. Player prediction models require season game logs, verified participation and injury data.</p>';
+ if(blocks.length)output+='<div class="rows">'+blocks.map(b=>`<div class="item"><b>${escapeHtml(b.team)} • ${escapeHtml(b.group)}</b>${b.players.slice(0,4).map(p=>`<p>${escapeHtml(p.athlete?.displayName||'Player')}: ${escapeHtml(p.displayValue||p.value||'—')}</p>`).join('')}</div>`).join('')+'</div>';
+ if(box.length)output+='<div class="item" style="margin-top:12px"><b>Box score available</b><p>Tap Players to see reported player game statistics.</p></div>';
+ if(!blocks.length&&!box.length)output+='<div class="empty">Player statistics have not been published for this matchup yet. No player predictions are invented.</div>';
+ output+='<div class="item" style="margin-top:12px"><b>Team rosters</b><p class="note">Published team rosters are not confirmed starters or active-game availability.</p><div id="rosterPanel" class="rows"><div class="empty">Loading team rosters…</div></div></div>';
+ return output;
+}
+
+let summaryError='';const rosterCache=new Map();
+async function rosterFor(teamId){const key=league+':'+teamId;if(rosterCache.has(key))return rosterCache.get(key);const data=await getJson(`/.netlify/functions/sports?league=${league}&team=${encodeURIComponent(teamId)}`);rosterCache.set(key,data);return data;}
+function rosterAthletes(data){
+ const athletes=Array.isArray(data?.athletes)?data.athletes:[];
+ return athletes.flatMap(g=>{
+   if(Array.isArray(g?.items))return g.items;
+   if(Array.isArray(g?.athletes))return g.athletes;
+   if(g?.displayName||g?.fullName)return [g];
+   return [];
+ }).filter(a=>a&&typeof a==='object');
+}
+async function loadRosters(){const panel=$('rosterPanel');if(!panel||!selected)return;const current=selected.id,currentLeague=league;const comps=teams(selected);const html=await Promise.all(comps.map(async c=>{const id=c.team?.id,name=c.team?.displayName||'Team';if(!id)return `<div class="empty">${escapeHtml(name)} roster ID unavailable</div>`;try{const data=await rosterFor(id),athletes=rosterAthletes(data);if(!athletes.length)return `<div class="item"><b>${escapeHtml(name)}</b><p>No roster returned by provider.</p></div>`;return `<div class="item"><b>${escapeHtml(name)} • ${athletes.length} listed</b><div class="scroll" style="max-height:320px">${athletes.map(a=>`<p>${escapeHtml(a.displayName||a.fullName||a.name||'Player')} <span class="muted">${escapeHtml(a.position?.abbreviation||a.position?.displayName||'')} ${escapeHtml(a.jersey?'#'+a.jersey:'')}</span></p>`).join('')}</div></div>`}catch(e){return `<div class="item"><b>${escapeHtml(name)}</b><p>Roster feed unavailable.</p></div>`}}));if(selected?.id===current&&league===currentLeague&&$('rosterPanel'))$('rosterPanel').innerHTML=html.join('');}
+
+function numberValue(v){const n=Number(v);return Number.isFinite(n)?n:null}
+function injuriesView(){
+ if(!summary)return '<div class="empty">Loading official game summary and injury information…</div>';
+ const inj=summary.injuries;
+ if(!Array.isArray(inj)||!inj.length)return '<div class="alert">No injury report was supplied by this game-summary feed. This does NOT mean either team is healthy. Check official team injury reports before making decisions.</div>';
+ let out='<p class="note">Provider-reported injury entries. Status can change; roster listings are not game-day active confirmations.</p><div class="intel-grid">';
+ for(const team of inj){const rows=team.injuries||team.athletes||[];out+=`<div class="intel-card"><h3>${escapeHtml(team.team?.displayName||team.displayName||'Team injury report')}</h3>`;
+ if(!rows.length)out+='<p>No player entries supplied.</p>';
+ for(const r of rows.slice(0,40)){const a=r.athlete||r;const name=a.displayName||a.fullName||r.name||'Player';const status=r.status||r.type?.description||r.details?.type||'Status not provided';const detail=r.details?.detail||r.details?.returnDate||r.comment||'';out+=`<p><b>${escapeHtml(name)}</b> — ${escapeHtml(typeof status==='object'?status.description||status.name||'Unknown':status)}${detail?' • '+escapeHtml(detail):''}</p>`}
+ out+='</div>'}return out+'</div>';
+}
+function leaderGroups(){return (summary?.leaders||[]).flatMap(t=>(t.leaders||[]).map(g=>({team:t.team?.displayName||'Team',title:g.displayName||g.name||'Category',athletes:g.leaders||[]})))}
+/* V10 player-prop research. No fabricated odds, lines, or health statuses. */
+const PROP_MARKETS = {
+ nfl: [
+  {id:'any_td',name:'Anytime TD (1+)',short:'ANY TD',group:'td',category:null,keys:[],step:.5},
+  {id:'two_td',name:'2+ touchdowns',short:'2+ TD',group:'td',category:null,keys:[],step:.5},
+  {id:'first_td',name:'First touchdown scorer',short:'FIRST TD',group:'td',sportsbookOnly:true,category:null,keys:[],step:.5},
+  {id:'last_td',name:'Last touchdown scorer',short:'LAST TD',group:'td',sportsbookOnly:true,category:null,keys:[],step:.5},
+  {id:'rush_td',name:'Rushing touchdowns',short:'RUSH TD',group:'td',category:'rushing',keys:['rushingTouchdowns','rushingTDs','TD'],step:.5},
+  {id:'rec_td',name:'Receiving touchdowns',short:'REC TD',group:'td',category:'receiving',keys:['receivingTouchdowns','receivingTDs','TD'],step:.5},
+  {id:'pass_td',name:'Passing touchdowns',short:'PASS TD',group:'td',category:'passing',keys:['passingTouchdowns','passingTDs','TD'],step:.5},
+  {id:'pass_yds',name:'Passing yards',short:'PASS YDS',group:'other',category:'passing',keys:['passingYards','YDS'],step:.5},
+  {id:'rush_yds',name:'Rushing yards',short:'RUSH YDS',group:'other',category:'rushing',keys:['rushingYards','YDS'],step:.5},
+  {id:'rec_yds',name:'Receiving yards',short:'REC YDS',group:'other',category:'receiving',keys:['receivingYards','YDS'],step:.5},
+  {id:'receptions',name:'Receptions',short:'RECEPTIONS',group:'other',category:'receiving',keys:['receptions','REC'],step:.5}
+ ],
+ nba: [
+  {id:'points',name:'Points',short:'PTS',category:'general',keys:['points','PTS'],step:.5},
+  {id:'rebounds',name:'Rebounds',short:'REB',category:'general',keys:['rebounds','REB'],step:.5},
+  {id:'assists',name:'Assists',short:'AST',category:'general',keys:['assists','AST'],step:.5},
+  {id:'threes',name:'3-pointers made',short:'3PM',category:'general',keys:['threePointsMade','threePointFieldGoalsMade','threePointFieldGoals','3PM','3PT','3P'],step:.5},
+  {id:'pra',name:'Points + rebounds + assists',short:'PRA',category:null,keys:[],step:.5}
+ ]
+};
+function propPosition(value){
+ const p=String(value||'').toUpperCase().trim();
+ return ({'QUARTERBACK':'QB','RUNNING BACK':'RB','FULLBACK':'FB','WIDE RECEIVER':'WR','TIGHT END':'TE'})[p]||p;
+}
+function marketsForPlayer(p){
+ const all=PROP_MARKETS[league];
+ if(league==='nba'||!p)return all;
+ const pos=propPosition(p.pos);
+ const ids=pos==='QB'?['pass_td','rush_td','any_td','two_td','first_td','last_td','pass_yds','rush_yds']:
+ /^(RB|FB)$/.test(pos)?['any_td','two_td','first_td','last_td','rush_td','rec_td','rush_yds','rec_yds','receptions']:
+ /^(WR|TE)$/.test(pos)?['any_td','two_td','first_td','last_td','rec_td','rush_td','rec_yds','receptions','rush_yds']:all.map(m=>m.id);
+ return all.filter(m=>ids.includes(m.id));
+}
+const propCache = new Map();
+let propRosters = null, propRosterLoading = false, propRosterError = '', propData = null, propLoading = false, propError = '';
+let propState = {team:'all',player:null,market:'',line:null,window:5,search:'',showMore:false};
+let propRequestToken=0;
+function resetProps(){propRequestToken++;propRosters=null;propRosterLoading=false;propRosterError='';propData=null;propLoading=false;propError='';propState={team:'all',player:null,market:'',line:null,window:5,search:'',showMore:false};}
+function gameSeason(){
+ const d=new Date(selected?.date||Date.now()), year=d.getUTCFullYear(), month=d.getUTCMonth()+1;
+ const fromEvent=Number(selected?.season?.year);
+ return fromEvent>2000&&fromEvent<2100?fromEvent:(league==='nba'&&month>=7?year+1:year);
+}
+function keyNorm(s){return String(s??'').toLowerCase().replace(/[^a-z0-9]/g,'')}
+function numericStat(s){if(typeof s==='number')return Number.isFinite(s)?s:null;const t=String(s??'').trim();if(!t||t==='--'||t==='-')return null;const num=Number(t);if(Number.isFinite(num))return num;const made=/^(\d+)\s*[-\/]\s*\d+$/.exec(t);return made?Number(made[1]):null}
+function normalizeGameLog(raw, before){
+ const allCategories=Array.isArray(raw?.categories)?raw.categories:[];
+ const names=Array.isArray(raw?.names)?raw.names:[],labels=Array.isArray(raw?.labels)?raw.labels:[];
+ const eventRoot=raw?.events;
+ const meta=Array.isArray(eventRoot)?Object.fromEntries(eventRoot.map(e=>[String(e.id||e.eventId),e])):
+  Array.isArray(eventRoot?.items)?Object.fromEntries(eventRoot.items.map(e=>[String(e.id||e.eventId),e])):
+  eventRoot&&typeof eventRoot==='object'?eventRoot:{};
+ const types=Array.isArray(raw?.seasonTypes)?raw.seasonTypes:[];
+ const regular=types.filter(t=>String(t.id)==='2'||String(t.type?.id)==='2'||/regular/i.test(t.displayName||t.name||''));
+ const selectedTypes=regular.length?regular:types.filter(t=>!/preseason|postseason|playoff/i.test(t.displayName||t.name||''));
+ const rows=new Map();
+ let segments={},start=0;
+ for(const c of allCategories){const count=Math.max(0,Math.min(50,Number(c.count)||0));segments[keyNorm(c.name)]={names:names.slice(start,start+count),labels:labels.slice(start,start+count)};start+=count}
+ // The provider may omit categories[].count. Reconstruct positions from actual per-game
+ // stat-array lengths, never from a guessed numerical value.
+ const inferred={};
+ for(const st of selectedTypes){let cursor=0;for(const [ci,cat] of (st.categories||[]).entries()){
+  const catKey=keyNorm(cat.name||cat.displayName||allCategories[ci]?.name||'general');
+  const sample=Array.isArray(cat.events)?cat.events.find(e=>Array.isArray(e.stats)):null;
+  const count=Array.isArray(cat.names)?cat.names.length:(sample?.stats?.length||0);
+  if(count&&cursor+count<=names.length&&!inferred[catKey])inferred[catKey]={names:names.slice(cursor,cursor+count),labels:labels.slice(cursor,cursor+count)};
+  cursor+=count;
+ }if(cursor)break;}
+ for(const st of selectedTypes){for(const [ci,cat] of (st.categories||[]).entries()){const catKey=keyNorm(cat.name||cat.displayName||allCategories[ci]?.name||'general'),segment=(segments[catKey]?.names?.length?segments[catKey]:inferred[catKey])||{};
+  for(const e of (Array.isArray(cat.events)?cat.events:cat.events&&typeof cat.events==='object'?Object.values(cat.events):[])){
+   const eventId=String(e.eventId||e.id||''),info=meta[eventId]||{},date=info.gameDate||info.eventDate||info.date||info.startTime||info.competition?.date||e.gameDate||e.date||'';
+   const when=date?new Date(date).getTime():NaN;
+   if(!eventId||!Number.isFinite(when)||(before&&when>=before))continue;
+   const game=rows.get(eventId)||{id:eventId,date:when,opponent:info.opponent?.abbreviation||'',values:{}};
+   const vals=Array.isArray(e.stats)?e.stats:[];
+   const cols=Array.isArray(cat.names)&&cat.names.length===vals.length?cat.names:segment.names?.length===vals.length?segment.names: names.length===vals.length?names:[];
+   const labs=Array.isArray(cat.labels)&&cat.labels.length===vals.length?cat.labels:segment.labels?.length===vals.length?segment.labels:labels.length===vals.length?labels:[];
+   if(!game.values[catKey])game.values[catKey]={};
+   vals.forEach((v,i)=>{const parsed=numericStat(v);if(parsed===null)return;
+    if(cols[i])game.values[catKey][keyNorm(typeof cols[i]==='object'?cols[i].name||cols[i].abbreviation:cols[i])]=parsed;
+    if(labs[i])game.values[catKey][keyNorm(typeof labs[i]==='object'?labs[i].name||labs[i].displayValue||labs[i].abbreviation:labs[i])]=parsed;
+   });
+   rows.set(eventId,game);
+  }
+ }}
+ return [...rows.values()].sort((a,b)=>b.date-a.date);
+}
+// ESPN sometimes combines rushing and receiving into a single category named
+// "rushingReceiving". Resolve full metric names across groups, but do NOT use
+// shared abbreviations such as YDS or TD in a combined group: they collide.
+function gameStat(game,category,aliases){
+ const values=game?.values||{},target=keyNorm(category),entries=Object.entries(values);
+ const ranked=[
+  ...entries.filter(([name])=>keyNorm(name)===target),
+  ...entries.filter(([name])=>keyNorm(name)!==target&&keyNorm(name).includes(target)),
+  ...entries.filter(([name])=>!keyNorm(name).includes(target))
+ ];
+ const shortNames=new Set(['yds','td','rec','pts','reb','ast','3pm','3pt','3p']);
+ // Explicit names such as rushingYards and receivingTouchdowns are unambiguous.
+ // Match them first even when ESPN grouped several categories together.
+ for(const alias of aliases){const key=keyNorm(alias);if(shortNames.has(key))continue;
+  for(const [,stats] of ranked)if(stats&&Object.hasOwn(stats,key))return stats[key];
+ }
+ // Generic labels only work inside an unambiguous group. NBA's general
+ // points/rebounds/assists labels remain safe even if ESPN calls it "stats".
+ const categoryNames=['rushing','receiving','passing'];
+ const safelyNamed=ranked.filter(([name])=>{
+  const n=keyNorm(name);
+  if(n===target)return true;
+  if(category==='general')return true;
+  return n.includes(target)&&categoryNames.filter(x=>n.includes(x)).length===1;
+ });
+ for(const alias of aliases){const key=keyNorm(alias);if(!shortNames.has(key))continue;
+  for(const [,stats] of safelyNamed)if(stats&&Object.hasOwn(stats,key))return stats[key];
+ }
+ // REC identifies catches even in a combined rushing+receiving group.
+ if(target==='receiving'&&aliases.some(a=>keyNorm(a)==='rec')){
+  for(const [name,stats] of ranked)if(keyNorm(name).includes('receiving')&&Object.hasOwn(stats,'rec'))return stats.rec;
+ }
+ return null;
+}
+function marketValue(game,market){
+ if(market.id==='any_td'||market.id==='two_td'){
+  const rush=gameStat(game,'rushing',['rushingTouchdowns','rushingTDs','TD']);
+  const rec=gameStat(game,'receiving',['receivingTouchdowns','receivingTDs','TD']);
+  return rush===null&&rec===null?null:(rush||0)+(rec||0);
+ }
+ if(market.id==='pra'){
+  const p=gameStat(game,'general',['points','PTS']),r=gameStat(game,'general',['rebounds','REB']),a=gameStat(game,'general',['assists','AST']);
+  return p===null||r===null||a===null?null:p+r+a;
+ }
+ return gameStat(game,market.category,market.keys);
+}
+function marketSeries(games,market){return games.map(g=>({...g,value:marketValue(g,market)})).filter(g=>g.value!==null&&Number.isFinite(g.value));}
+function percentile(xs,q){if(!xs.length)return null;const sorted=[...xs].sort((a,b)=>a-b),i=(sorted.length-1)*q,lo=Math.floor(i),hi=Math.ceil(i);return sorted[lo]+(sorted[hi]-sorted[lo])*(i-lo)}
+function modelProp(rows,market,line,windowSize){
+ const valid=marketSeries(rows,market).slice(0,windowSize);
+ const values=valid.map(g=>g.value), n=values.length;
+ if(!n)return {n:0,values:[],rows:valid,projection:null,hits:0,rate:null,mean:null};
+ const mean=values.reduce((a,b)=>a+b,0)/n;
+ const weights=values.map((_,i)=>Math.pow(.86,i));
+ const avg=values.reduce((s,v,i)=>s+v*weights[i],0)/weights.reduce((a,b)=>a+b,0);
+ const projection=n>=3?(avg*.75+mean*.25):null;
+ const hits=line===null?null:values.filter(v=>v>line).length;
+ return {n,values,rows:valid,mean,projection,hits,rate:hits===null?null:hits/n,median:percentile(values,.5),q25:percentile(values,.25),q75:percentile(values,.75),sd:stdev(values)};
+}
+// Quant Edge: deterministic weighted empirical distribution, with chronological holdouts.
+function quantForecast(values,line){
+ const xs=values.slice(0,20); if(xs.length<8)return null;
+ const w=xs.map((_,i)=>Math.pow(.94,i)),total=w.reduce((a,b)=>a+b,0);
+ const mean=xs.reduce((a,x,i)=>a+x*w[i],0)/total;
+ // Weak symmetric smoothing avoids unjustified 0%/100% certainty.
+ const counts=[0,0,0]; xs.forEach((x,i)=>counts[x>line?0:x<line?1:2]+=w[i]);
+ const denom=total+2; const over=(counts[0]+1)/denom,under=(counts[1]+1)/denom,push=counts[2]/denom;
+ return {mean,over,under,push,n:xs.length,lo:percentile(xs,.1),hi:percentile(xs,.9)};
+}
+function quantAudit(values,line){
+ let n=0,brier=0,mae=0,bench=0;
+ for(let i=0;i<values.length-7;i++){
+  const past=values.slice(i+1),q=quantForecast(past,line);if(!q||values[i]===line)continue;
+  const y=Number(values[i]>line),p=q.over/(q.over+q.under);
+  n++;brier+=(p-y)**2;bench+=(.5-y)**2;mae+=Math.abs(q.mean-values[i]);
+ }return {n,brier:n?brier/n:null,bench:n?bench/n:null,mae:n?mae/n:null};
+}
+function quantMarkup(observed,line,injury,player){
+ const xs=observed.map(g=>g.value),q=quantForecast(xs,line);if(!q)return '<div class="prop-insight"><b>Quant Edge • insufficient history</b><p>At least 8 valid games required for a probability estimate.</p></div>';
+ const pct=x=>(100*x).toFixed(1)+'%',a=quantAudit(xs,line);
+ let out=`<div class="prop-insight"><b>QUANT EDGE • experimental distribution</b><p>Weighted projection ${q.mean.toFixed(2)} • historical 10–90th percentile ${q.lo.toFixed(1)}–${q.hi.toFixed(1)} • ${q.n} games</p><p>Over ${pct(q.over)} • Under ${pct(q.under)} • Push ${pct(q.push)}</p><p>Walk-forward: ${a.n} non-push holdouts${a.n?` • MAE ${a.mae.toFixed(2)} • Brier ${a.brier.toFixed(3)} (50/50 baseline ${a.bench.toFixed(3)})`:''}. Fixed custom line, not historical bookmaker odds; uncalibrated.</p>`;
+ const risk=injury&&/out|questionable|doubtful|inactive|day.to.day/i.test(injury);
+ if(risk)out+='<p class="warn">Availability warning: market comparison withheld.</p>';
+ else if(state(selected)!=='pre')out+='<p class="note">Pregame model only; live or completed prices are not evaluated.</p>';
+ else if(propOddsState.key===propOddsKey()&&propOddsState.data){
+ const offers=[];for(const b of propOddsState.data.books||[])for(const o of b.offers||[]){
+ if(oddsEventName(o.player)!==oddsEventName(player.name)||o.point!==line||!Number.isFinite(o.decimal)||o.decimal<=1)continue;
+ const side=o.name.toLowerCase();if(!['over','under'].includes(side))continue;
+ const age=Date.now()-Date.parse(b.updatedAt||'');if(!Number.isFinite(age)||age<0||age>15*60000)continue;
+ const other=(b.offers||[]).find(z=>oddsEventName(z.player)===oddsEventName(player.name)&&z.point===line&&z.name.toLowerCase()===(side==='over'?'under':'over')&&z.decimal>1);
+ const fair=other?(1/o.decimal)/(1/o.decimal+1/other.decimal):null;
+ offers.push({book:b.book,side,price:o.decimal,breakEven:1/o.decimal,fair});}
+ if(offers.length)out+=`<p>Exact-line market comparison (book timestamp ≤15 min):</p>${offers.slice(0,20).map(o=>`<p>${escapeHtml(o.book)} • ${o.side} ${o.price.toFixed(2)} • break-even ${pct(o.breakEven)}${o.fair===null?'':` • no-vig market ${pct(o.fair)}`}</p>`).join('')}`;
+ else out+='<p class="note">No fresh matching over/under prices for this exact line.</p>';
+ }
+ return out+'<p class="note">Research only. No verified edge, opponent or minutes adjustment. Historical results may not represent the next game; injury coverage can be incomplete.</p></div>';
+}
+function injuryForPlayer(player){const injuries=summary?.injuries||[];for(const t of injuries)for(const r of t.injuries||t.athletes||[]){const a=r.athlete||r;if((a?.id&&String(a.id)===String(player.id))||(a?.displayName&&a.displayName.toLowerCase()===player.name.toLowerCase())){
+  const s=r.status||r.type?.description||r.details?.type||'Listed';return typeof s==='object'?s.description||s.name||'Listed':String(s);
+ }}return null}
+function allPropPlayers(){return (propRosters||[]).flatMap(x=>x.players).filter(p=>league!=='nfl'||/^(QB|RB|FB|WR|TE)$/.test(propPosition(p.pos)));}
+function rosterPlayersFallback(){const teamsData=summary?.boxscore?.players||[];return teamsData.map((t,i)=>({name:t.team?.displayName||('Team '+(i+1)),teamId:String(t.team?.id||i),players:(t.statistics||[]).flatMap(g=>g.athletes||[]).map(x=>({id:String(x.athlete?.id||''),name:x.athlete?.displayName||'',pos:x.athlete?.position?.abbreviation||'',headshot:x.athlete?.headshot?.href||'',teamId:String(t.team?.id||i),team:t.team?.displayName||'Team'})).filter(p=>/^\d+$/.test(p.id))})).filter(t=>t.players.length)}
+async function ensurePropsRosters(){
+ if(propRosters||propRosterLoading||!selected)return;
+ const id=selected.id, requestedLeague=league, comps=teams(selected);propRosterLoading=true;
+ try{const loaded=await Promise.all(comps.map(async c=>{
+  const teamId=c.team?.id,name=c.team?.displayName||'Team';if(!teamId)return {teamId:'',name,players:[]};
+  try{const res=await rosterFor(teamId),players=rosterAthletes(res).map(a=>({id:String(a.id||''),name:a.displayName||a.fullName||a.name||'',pos:propPosition(a.position?.abbreviation||a.position?.name||a.position?.displayName||''),headshot:a.headshot?.href||'',teamId:String(teamId),team:name})).filter(a=>/^\d+$/.test(a.id));return {teamId:String(teamId),name,players}}catch(e){return {teamId:String(teamId),name,players:[]}}}));
+  if(selected?.id!==id||league!==requestedLeague)return;
+  propRosters=loaded.some(x=>x.players.length)?loaded:rosterPlayersFallback();
+  if(!propRosters.length)propRosterError='Roster data unavailable. ESPN has not supplied selectable athletes for this game.';
+  if(!propState.player){
+   const players=allPropPlayers(),leaderIds=new Set((summary?.leaders||[]).flatMap(t=>(t.leaders||[]).flatMap(g=>(g.leaders||[]).map(x=>String(x.athlete?.id||'')))));
+   propState.player=players.find(p=>leaderIds.has(p.id))?.id||players.find(p=>p.pos==='QB')?.id||players[0]?.id||null;
+  }
+ }catch(e){if(selected?.id===id){propRosterError='Player rosters unavailable: '+e.message;propRosters=rosterPlayersFallback()}}finally{if(selected?.id===id&&league===requestedLeague){propRosterLoading=false;if(['props','playerperiod'].includes(tab))renderDetail()}}
+}
+async function ensurePropGamelog(){
+ if(!propState.player||!selected||propLoading)return;
+ const season=gameSeason(),key=`${league}:${propState.player}:${season}:${selected.date}`;
+ if(propData?.key===key)return;
+ const gameId=selected.id,requestedLeague=league,requestedPlayer=propState.player,token=++propRequestToken;
+ function stillCurrent(){return token===propRequestToken&&selected?.id===gameId&&league===requestedLeague&&propState.player===requestedPlayer}
+ propLoading=true;propError='';
+ try{
+  let games,rawDataCount=0;
+  if(propCache.has(key)){const cached=propCache.get(key);games=cached.games;rawDataCount=cached.rawCount;}
+  else{
+   const data=await getJson(`/.netlify/functions/sports?league=${requestedLeague}&player=${encodeURIComponent(requestedPlayer)}&season=${season}`);
+   const when=Date.parse(selected?.date||'');
+   games=normalizeGameLog(data,Number.isFinite(when)?when:null);
+   rawDataCount=Number(data?._lab?.reportedStatRows)||0;
+   if(propCache.size>140)propCache.clear();
+   propCache.set(key,{games,rawCount:rawDataCount});
+  }
+  if(!stillCurrent())return;
+  propData={key,games,rawCount:Number.isFinite(rawDataCount)?rawDataCount:0};
+  const markets=marketsForPlayer(allPropPlayers().find(p=>p.id===requestedPlayer));
+  if(!propState.market||!markets.some(m=>m.id===propState.market))propState.market=markets.find(m=>!m.sportsbookOnly&&marketSeries(games,m).length)?.id||markets[0]?.id||'';
+  propState.line=null;
+ }catch(err){if(stillCurrent())propError='Game logs unavailable: '+err.message}
+ finally{if(stillCurrent()){propLoading=false;if(['props','playerperiod'].includes(tab))renderDetail()}}
+}
+function propPlayerRow(p){return `<button type="button" data-prop-player="${escapeHtml(p.id)}" data-prop-name="${escapeHtml(p.name.toLowerCase())}" class="prop-player ${propState.player===p.id?'selected':''}">${p.headshot?img(p.headshot,p.name):'<span class="prop-avatar">'+escapeHtml(p.name.slice(0,1))+'</span>'}<span><b>${escapeHtml(p.name)}</b><small>${escapeHtml(p.pos||'Player')} • ${escapeHtml(p.team)}</small></span></button>`}
+function propsView(){
+ if(!selected)return '';
+ if(!propRosters&&!propRosterLoading)queueMicrotask(ensurePropsRosters);
+ const [a,h]=teams(selected),all=allPropPlayers(),teamOptions=[{id:'all',name:'Both teams'},{id:String(a.team?.id),name:a.team?.abbreviation||'Away'},{id:String(h.team?.id),name:h.team?.abbreviation||'Home'}];
+ const filtered=all.filter(p=>(propState.team==='all'||p.teamId===propState.team)&&(!propState.search||p.name.toLowerCase().includes(propState.search.trim().toLowerCase())));
+ const player=all.find(p=>p.id===propState.player);
+ const expectedKey=player?`${league}:${player.id}:${gameSeason()}:${selected.date}`:'';
+ const games=propData?.key===expectedKey?propData.games:null;
+ if(player&&!games&&!propLoading&&!propError)queueMicrotask(ensurePropGamelog);
+ let out=`<div class="prop-heading"><div><div class="eyebrow">PROP RESEARCH ENGINE • V18</div><h3>NFL + NBA Player Props</h3><p class="note">Historical game logs, rolling projections and observed hit rates. Not sportsbook odds or verified win probabilities.</p></div><span class="tag">${escapeHtml(league.toUpperCase())} • ${gameSeason()} season</span></div>`;
+ out+=`<div class="prop-chooser"><div class="prop-controls">${teamOptions.map(t=>`<button type="button" class="prop-filter ${propState.team===t.id?'active':''}" data-prop-team="${escapeHtml(t.id)}">${escapeHtml(t.name)}</button>`).join('')}</div><input type="search" id="propSearch" value="${escapeHtml(propState.search)}" placeholder="Find a player…" aria-label="Search players"></div>`;
+ if(propRosterLoading)out+='<div class="empty">Loading published rosters…</div>';
+ else if(propRosterError)out+=`<div class="alert">${escapeHtml(propRosterError)}</div>`;
+ if(filtered.length)out+=`<div class="prop-players">${filtered.slice(0,propState.showMore?120:35).map(propPlayerRow).join('')}</div>${filtered.length>35?`<div class="prop-list-hint">${filtered.length>35&&!propState.showMore?'Showing first 35. Search any player or ':''}${!propState.showMore?'<button type="button" class="action" data-prop-more>Show more players</button>':`Showing ${Math.min(120,filtered.length)} of ${filtered.length} players`}</div>`:''}`;
+ else if(!propRosterLoading&&!propRosterError)out+='<div class="empty">No offensive players returned for this matchup.</div>';
+ if(!player)return out+'<div class="empty" style="margin-top:12px">Choose a player to see available props.</div>';
+ const injury=injuryForPlayer(player);
+ out+=`<section class="prop-results"><div class="prop-selected"><div>${player.headshot?img(player.headshot,player.name):''}</div><div><div class="eyebrow">PLAYER SELECTED</div><h3>${escapeHtml(player.name)}</h3><p class="muted small">${escapeHtml(player.team)} • ${escapeHtml(player.pos)}${injury?' • Injury feed: '+escapeHtml(injury):' • Injury status not confirmed'}</p></div></div>`;
+ const markets=marketsForPlayer(player),market=markets.find(m=>m.id===propState.market)||markets[0];
+ const marketButtons=ms=>`<div class="prop-controls prop-markets" role="group" aria-label="${league==='nfl'?'NFL':'NBA'} ${ms[0]?.group==='td'?'touchdown':'player'} markets">${ms.map(m=>`<button type="button" aria-pressed="${market.id===m.id?'true':'false'}" class="prop-filter ${market.id===m.id?'active':''}" data-prop-market="${m.id}">${escapeHtml(m.name)}</button>`).join('')}</div>`;
+ if(league==='nfl')out+=`<div class="prop-market-heading">🏈 Touchdown picks</div>${marketButtons(markets.filter(m=>m.group==='td'))}<p class="prop-market-note">Choose any TD market. First/last TD scorer requires sportsbook lines or detailed play-by-play; no fabricated historical first scorers.</p><div class="prop-market-heading">Yards & receptions</div>${marketButtons(markets.filter(m=>m.group!=='td'))}`;
+ else out+=`<div class="prop-market-heading">Select a stat</div>${marketButtons(markets)}`;
+ if(market.sportsbookOnly){out+=playerOddsMarkup(player);return out+`<div class="empty">${escapeHtml(market.name)} is a sportsbook-only selection in this version. Season stat totals cannot reveal who scored the first or last touchdown. If your odds provider posts this market for the upcoming game, select <b>Fetch actual bookmaker player lines</b> above. No made-up percentages.</div></section>`;}
+ if(propLoading||!games&&!propError)return out+'<div class="empty">Loading historical game logs for the selected market… You can still switch markets.</div></section>';
+ if(propError)return out+`<div class="alert">${escapeHtml(propError)}. Market selection still works. Choose another player or retry.</div><button type="button" class="action" data-prop-retry style="margin-top:10px">↻ Retry player game log</button>${playerOddsMarkup(player)}</section>`;
+ out+=playerOddsMarkup(player);
+ const observed=marketSeries(games,market),baseline=modelProp(games,market,null,propState.window);
+ if(!observed.length)return out+=`<div class="empty">${!games.length?'ESPN returned no usable dated regular-season game stats. Provider reported '+(propData?.rawCount??0)+' stat rows in its payload. The season/metadata mapping may be unavailable.':`This player has ${games.length} dated game log${games.length===1?'':'s'}, but ${escapeHtml(market.name.toLowerCase())} is missing after category-aware mapping. Provider groups: ${escapeHtml(Object.keys(games[0]?.values||{}).join(', ')||'none')}. Provider columns: ${escapeHtml(Object.values(games[0]?.values||{}).flatMap(o=>Object.keys(o)).slice(0,18).join(', ')||'none')}.`} No projection will be guessed.</div></section>`;
+ const suggestedLine=market.id==='two_td'?1.5:market.id.endsWith('_td')||market.id==='any_td'?.5:Math.max(.5,Math.floor((baseline.projection??baseline.mean??0))+0.5),line=propState.line===null?suggestedLine:propState.line;
+ const v=modelProp(games,market,line,propState.window);
+ const season=modelProp(games,market,line,999);
+ out+=quantMarkup(observed,line,injury,player);
+ const format=n=>Number(n).toFixed(n>=10?1:2).replace(/(\.\d*?[1-9])0+$|\.0+$/,'$1');
+ out+=`<div class="prop-options"><label>Line (your choice)<input id="propLine" type="number" min="0" max="1000" step="0.5" value="${line}" aria-label="Prop line"></label><label>Recent games<select id="propWindow"><option value="5" ${propState.window===5?'selected':''}>Last 5</option><option value="10" ${propState.window===10?'selected':''}>Last 10</option><option value="20" ${propState.window===20?'selected':''}>Last 20</option></select></label></div>`;
+ out+=`<div class="prop-metrics"><div class="prop-metric"><span>ROLLING PROJECTION</span><strong>${v.projection===null?'—':format(v.projection)}</strong><small>${v.n<3?'Needs at least 3 games':'Weighted recent-game estimate'}</small></div><div class="prop-metric"><span>RECENT AVERAGE</span><strong>${format(v.mean)}</strong><small>${v.n} reported game${v.n===1?'':'s'}</small></div><div class="prop-metric"><span>OVER ${line} HIT RATE</span><strong>${v.hits}/${v.n}</strong><small>${(v.rate*100).toFixed(0)}% observed • not predicted odds</small></div><div class="prop-metric"><span>SEASON SAMPLE</span><strong>${season.n}</strong><small>Reported games before matchup</small></div></div>`;
+ const plotted=observed.slice(0,10),peak=Math.max(...plotted.map(g=>g.value),line,1);
+ out+=`<div class="research-strip"><span class="research-chip ${v.n<5?'warn':'ok'}">${v.n<5?'SMALL SAMPLE':'REPORTED GAMES'} • ${v.n}</span><span class="research-chip">Median: ${format(v.median)}</span><span class="research-chip">Middle 50%: ${format(v.q25)}–${format(v.q75)}</span><span class="research-chip">Game-to-game SD: ${v.sd===null?'—':format(v.sd)}</span></div>
+ <div class="prop-chart"><div class="prop-chart-title"><b>Recent ${escapeHtml(market.name.toLowerCase())}</b><span class="small muted">Blue = over ${line} • Pink = at/under</span></div><div class="prop-bars">${plotted.map(g=>`<div class="prop-bar-group"><span class="prop-bar-value">${format(g.value)}</span><div class="prop-bar-track"><div class="prop-bar ${g.value>line?'over':'under'}" style="height:${Math.max(5,Math.min(100,g.value/peak*100))}%"></div></div><span class="prop-bar-date">${escapeHtml(new Date(g.date).toLocaleDateString('en-US',{month:'numeric',day:'numeric',timeZone:'UTC'}))}</span></div>`).join('')}</div></div>`;
+ out+=`<div class="prop-insight"><b>${v.projection===null?'Limited data':'Projection vs custom line'}</b><p>${v.projection===null?'Only '+v.n+' games available; the model is withholding a projection.':`Recent-game projection ${format(v.projection)} vs ${line} line (${v.projection>line?'above':v.projection<line?'below':'equal'} by ${format(Math.abs(v.projection-line))}).`} ${v.hits} of ${v.n} reported games finished over this line. ${injury?'Listed injury status: '+escapeHtml(injury)+'.':''}</p></div>`;
+ out+=`<p class="note warn">Method: up to ${v.n} most recent reported regular-season games before this matchup; 75% recency-weighted mean + 25% simple mean. No opponent/defender, snap/minute, pace, or injury adjustments; no modeled or calibrated hit probability. ${market.id==='any_td'||market.id==='two_td'?'Offensive TD counts rushing + receiving touchdowns only; excludes return touchdowns, passing touchdowns and first-score order.':''} Data may be delayed. If a player is inactive, these figures do not apply.</p></section>`;
+ return out;
+}
+function propsAction(target){
+ if(target.closest('[data-prop-retry]')){if(selected&&propState.player)propCache.delete(`${league}:${propState.player}:${gameSeason()}:${selected.date}`);propRequestToken++;propError='';propLoading=false;propData=null;renderDetail();return}
+ const more=target.closest('[data-prop-more]');if(more){propState.showMore=true;renderDetail();return}
+ const team=target.closest('[data-prop-team]');if(team){propState.team=team.dataset.propTeam;propState.showMore=false;renderDetail();saveSelection();return}
+ const player=target.closest('[data-prop-player]');if(player){
+  if(propState.player!==player.dataset.propPlayer){resetPropOdds();propRequestToken++;propState.player=player.dataset.propPlayer;propState.market='';propState.line=null;propData=null;propLoading=false;propError='';}
+  renderDetail();saveSelection();return
+ }
+ const market=target.closest('[data-prop-market]');if(market){resetPropOdds();propState.market=market.dataset.propMarket;propState.line=null;renderDetail();saveSelection()}
+}
+function propsChange(target){
+ if(target.id==='propWindow'){propState.window=[5,10,20].includes(Number(target.value))?Number(target.value):5;propState.line=null;renderDetail();saveSelection()}
+ if(target.id==='propLine'){const n=Number(target.value);if(target.value!==''&&Number.isFinite(n)&&n>=0&&n<=1000){propState.line=n;renderDetail();saveSelection()}}
+}
+
+
+// Odds are fetched only when a research tab is opened; a single board fetch covers the league.
+let oddsState={league:null,loading:false,data:null,error:'',updated:0};
+let propOddsState={key:null,loading:false,data:null,error:''};
+const oddsEventName=n=>String(n||'').toLowerCase().replace(/[^a-z0-9]/g,'');
+function oddsEvent(){
+ if(!selected||!oddsState.data?.games||oddsState.league!==league)return null;
+ const [a,h]=teams(selected),an=oddsEventName(a.team?.displayName),hn=oddsEventName(h.team?.displayName),date=Date.parse(selected.date);
+ return oddsState.data.games.find(g=>oddsEventName(g.away)===an&&oddsEventName(g.home)===hn&&Number.isFinite(date)&&Math.abs(Date.parse(g.date)-date)<36*3600000)||null;
+}
+async function ensureOdds(){
+ if(!selected||!['odds','projection','props'].includes(tab))return;
+ if(oddsState.league===league&&(oddsState.loading||Date.now()-oddsState.updated<240000))return;
+ const lg=league;oddsState={league:lg,loading:true,data:null,error:'',updated:0};
+ try{const data=await getJson(`/.netlify/functions/sports?league=${lg}&odds=1`);
+  if(oddsState.league!==lg)return;
+  oddsState={league:lg,loading:false,data,error:'',updated:Date.now()};
+ }catch(e){if(oddsState.league===lg)oddsState={league:lg,loading:false,data:null,error:e.message,updated:Date.now()}}
+ if(selected&&league===lg&&['odds','projection','props'].includes(tab))renderDetail();
+}
+function fmtPercent(x){return Number.isFinite(x)?`${(100*x).toFixed(1)}%`:'—'}
+function fmtDecimal(x){return Number.isFinite(x)?x.toFixed(2):'—'}
+function fmtMarketNum(x){return Number.isFinite(x)?(x>0?'+':'')+Number(x).toFixed(1):'—'}
+function bookmakerStatus(){
+ if(oddsState.league!==league){queueMicrotask(ensureOdds);return '<div class="odds-state">Checking if verified bookmaker odds are configured…</div>'}
+ if(oddsState.loading)return '<div class="odds-state">Loading current odds from the provider…</div>';
+ if(oddsState.error)return `<div class="odds-state">Odds feed unavailable: ${escapeHtml(oddsState.error)}. Historical model data remains usable. <button id="retryOdds" class="action" type="button">Retry odds</button></div>`;
+ if(!oddsState.data?.configured)return `<div class="odds-state"><b>Real odds not connected.</b> Add <code>ODDS_API_KEY</code> in Netlify → Project configuration → Environment variables, then redeploy. The key stays on Netlify, not in the browser. Bookmaker data and player-prop markets may require a compatible paid plan. No odds will be made up.</div>`;
+ if(!oddsEvent())return '<div class="odds-state">No matching current bookmaker market for this game. The odds provider may not cover this date, team, or market; completed games usually have no live odds. No generic lines substituted.</div>';
+ return '';
+}
+function bookmakerTable(event){
+ if(!event)return '';
+ const c=event.consensus||{},books=event.bookmakers||[];
+ const rows=books.filter(b=>b.homeFair!==null||b.homeSpread!==null||b.total!==null);
+ return `<div class="odds-grid"><div class="odds-box"><small>HOME FAIR WIN SHARE</small><strong>${fmtPercent(c.homeFair)}</strong><div class="hint">Median bookmaker no-vig • ${c.booksWithMoneyline||0} moneyline books</div></div>
+ <div class="odds-box"><small>AWAY FAIR WIN SHARE</small><strong>${fmtPercent(c.awayFair)}</strong><div class="hint">Normalized from two-sided odds; not independently predictive</div></div>
+ <div class="odds-box"><small>CONSENSUS HOME SPREAD</small><strong>${fmtMarketNum(c.homeSpread)}</strong><div class="hint">Median bookmaker home-point handicap</div></div>
+ <div class="odds-box"><small>CONSENSUS GAME TOTAL</small><strong>${Number.isFinite(c.total)?c.total.toFixed(1):'—'}</strong><div class="hint">Median bookmaker over/under line</div></div></div>
+ <div class="odds-list"><div class="odds-row heading"><span>SPORTSBOOK</span><span>HOME FAIR</span><span>SPREAD</span><span>TOTAL</span></div>${rows.map(b=>`<div class="odds-row"><b>${escapeHtml(b.book)}</b><span>${fmtPercent(b.homeFair)}</span><span>${fmtMarketNum(b.homeSpread)}</span><span>${Number.isFinite(b.total)?b.total.toFixed(1):'—'}</span></div>`).join('')}</div>`;
+}
+
+// Provider-published ESPN odds can occasionally appear inside a game summary without a paid key.
+// This is a separate informational source; do not treat it as a live multi-book consensus.
+function espnLines(){
+ const fromSummary=Array.isArray(summary?.pickcenter)?summary.pickcenter:[],fromCompetition=selected?.competitions?.[0]?.odds||[];
+ const pool=[...fromSummary,...(Array.isArray(fromCompetition)?fromCompetition:[fromCompetition])].filter(Boolean);
+ return pool.map(x=>{
+  const point=v=>v===null||v===undefined||v===''?null:(Number.isFinite(Number(v))?Number(v):null);
+  const homeMl=point(x.homeTeamOdds?.moneyLine),awayMl=point(x.awayTeamOdds?.moneyLine),total=point(x.overUnder),spread=point(x.spread);
+  const details=String(x.details||'').slice(0,120);
+  const provider=x.provider?.name||x.provider?.displayName||'ESPN';
+  return {provider,homeMl,awayMl,total,spread,details};
+ }).filter(x=>x.homeMl!==null||x.awayMl!==null||x.total!==null||x.spread!==null||x.details).slice(0,3);
+}
+function espnOddsPanel(){const arr=espnLines();if(!arr.length)return '';
+ return `<div class="market-banner"><b>ESPN-listed odds snapshot (separate source)</b><p class="note">Only values explicitly supplied with the event; not necessarily current or consensus prices. Check dates before use.</p>${arr.map(x=>`<div class="odds-row"><span>${escapeHtml(x.provider)}</span><span>${x.homeMl===null?'—':x.homeMl}</span><span>${x.spread===null?'—':x.spread}</span><span>${x.total===null?'—':x.total}</span></div><p class="note">Away moneyline: ${x.awayMl===null?'—':x.awayMl} • ${escapeHtml(x.details)}</p>`).join('')}</div>`;
+}
+function walkForwardScoringError(rows){
+ const chronology=[...rows].reverse();const errors=[];
+ for(let i=4;i<chronology.length;i++){
+  const past=chronology.slice(0,i).reverse(),mean=average(past.map(g=>g.for));
+  const recent=recentAverage(past,'for',5);
+  if(Number.isFinite(mean)&&Number.isFinite(recent))errors.push(Math.abs(.65*recent+.35*mean-chronology[i].for));
+ }
+ return {n:errors.length,mae:errors.length?average(errors):null};
+}
+
+function oddsView(){
+ const [a,h]=teams(selected),event=oddsEvent();
+ let out=`<div class="eyebrow">V18 • VERIFIED MARKET DATA</div><h3>Odds & market comparison</h3><p class="note">${escapeHtml(a.team?.displayName)} @ ${escapeHtml(h.team?.displayName)} • bookmaker lines only when actually returned by the connected provider.</p>${league==='nfl'?'<div class="market-banner"><b>🏈 Looking for touchdown picks?</b><p class="note">Anytime TD, first/last TD, 2+ TD, rushing TD, receiving TD, and passing TD are under Player Props. You can browse them without an odds key; verified bookmaker lines require supported market access.</p><button type="button" class="action" id="openTouchdownProps">🎯 Open touchdown markets</button></div>':''}`;
+ const status=bookmakerStatus();if(status)return out+status+espnOddsPanel();
+ out+=`<div class="market-banner"><b>${escapeHtml(event.away)} @ ${escapeHtml(event.home)}</b><p class="note">Source: ${escapeHtml(oddsState.data.source)} • snapshot retrieved ${escapeHtml(new Date(oddsState.data.fetchedAt).toLocaleString())}. Bookmakers can publish different prices and updates.</p></div>${bookmakerTable(event)}`;
+ const m=predictionState.key===predictionKey()?predictionState.result:null;
+ if(!m?.ok){out+=`<div class="market-banner"><b>Model comparison unavailable</b><p class="note">Load enough verified completed games in the Projection tab. We never pretend bookmaker implied odds are the model's prediction.</p></div>`}
+ else{const sim=modelSimulation(m.awayScore,m.homeScore,m.sdA,m.sdH,`${league}:${selected.id}:pre`),c=event.consensus||{};
+  const delta=Number.isFinite(c.homeFair)?(sim.home-c.homeFair)*100:null;
+  out+=`<div class="market-banner"><b>Market vs experimental model</b><div class="odds-grid"><div class="odds-box"><small>MODEL HOME SHARE</small><strong>${fmtPercent(sim.home)}</strong><div class="hint">Uncalibrated 12,000-draw model</div></div><div class="odds-box"><small>MODEL − MARKET</small><strong>${delta===null?'—':(delta>0?'+':'')+delta.toFixed(1)+' pp'}</strong><div class="hint">Percentage-point disagreement, not guaranteed edge or profitability</div></div><div class="odds-box"><small>MODEL TOTAL</small><strong>${(m.awayScore+m.homeScore).toFixed(1)}</strong></div><div class="odds-box"><small>MARKET TOTAL</small><strong>${Number.isFinite(c.total)?c.total.toFixed(1):'—'}</strong></div></div><p class="note warn">Model shares are not calibrated; market disagreement alone does not prove value. Injury and lineup changes are not quantified.</p></div>`}
+ return out+espnOddsPanel()+'<p class="note">The Odds API requires your own key and sufficient plan coverage. Historical bookmaker odds and most player props are additional provider features. Data are informational only.</p>';
+}
+function historySide(name,t,opponent){
+ const rows=t.rows.slice(0,12),walk=walkForwardScoringError(t.rows),h2h=t.rows.filter(g=>oddsEventName(g.opponent)===oddsEventName(opponent)).slice(0,8);
+ return `<div class="item"><b>${escapeHtml(name)} • season history</b><p class="note">${t.n} completed games • ${t.pf.toFixed(1)} scored • ${t.pa.toFixed(1)} allowed • ${(t.net>=0?'+':'')+t.net.toFixed(1)} average margin. Against ${escapeHtml(opponent)} this season: ${h2h.length} completed games in the team feed. Simple scoring-baseline walk-forward MAE: ${walk.mae===null?'Not enough games':walk.mae.toFixed(1)+' points over '+walk.n+' holdouts'} (NOT a backtest of the complete matchup model).</p><div class="history-table"><table><thead><tr><th>DATE</th><th>OPP</th><th>PTS</th><th>ALLOWED</th><th>RESULT</th></tr></thead><tbody>${rows.map(g=>`<tr><td>${escapeHtml(new Date(g.date).toLocaleDateString('en-US',{month:'short',day:'numeric',timeZone:'UTC'}))}</td><td>${g.home?'vs':'@'} ${escapeHtml(g.opponent)}</td><td>${g.for}</td><td>${g.against}</td><td>${g.for>g.against?'W':g.for<g.against?'L':'T'}</td></tr>`).join('')}</tbody></table></div></div>`;
+}
+function historyView(){const check=predictionStatus();if(check)return `<div class="eyebrow">HISTORICAL MATCHUP RESEARCH</div>${check}`;
+ const m=predictionState.result,[a,h]=teams(selected);
+ return `<div class="eyebrow">V18 • COMPLETED-GAME HISTORY</div><h3>Historical matchup trends</h3><p class="note">Games shown are verified regular-season team results before the selected matchup. Actual results, not projections. Last 12 displayed per side; full current-season samples used in the matchup model.</p><div class="rows">${historySide(a.team?.displayName||'Away',m.away,h.team?.abbreviation||'')}${historySide(h.team?.displayName||'Home',m.home,a.team?.abbreviation||'')}</div><div class="market-banner"><b>History coverage</b><p class="note">Away: ${m.away.n} completed games • Home: ${m.home.n} completed games. Season ${gameSeason()}. Earlier-season records are not silently mixed into current-season form; missing games remain unavailable. NFL/NBA opponent quality beyond points allowed is not claimed.</p></div>`;
+}
+// STRICT walk-forward evaluation: test a completed *previous meeting* against what was
+// known before that game's start. We require both original team feeds to contain it.
+// This will often yield ZERO holdouts and honestly reports that limitation.
+function walkForwardMatchupAudit(leagueKey,awayData,homeData,cutoff,eventId){
+ const a=completedBefore(awayData,cutoff,eventId),h=completedBefore(homeData,cutoff,eventId);
+ const aById=new Map(a.map(g=>[String(g.id),g]));
+ const candidates=h.filter(g=>aById.has(String(g.id))).sort((x,y)=>Date.parse(x.date)-Date.parse(y.date));
+ const holdouts=[];
+ for(const hg of candidates){
+  const ag=aById.get(String(hg.id)),when=Math.min(Date.parse(hg.date),Date.parse(ag.date));
+  if(!Number.isFinite(when)||Math.abs(Date.parse(hg.date)-Date.parse(ag.date))>12*3600000)continue;
+  if(ag.for!==hg.against||ag.against!==hg.for||ag.home===hg.home)continue;
+  // This prior meeting may have been hosted by the opposite team.
+  // Evaluate the correct historical venue, never today's home designation.
+  const before=ag.home
+   ?matchupProjection(leagueKey,homeData,awayData,when,hg.id)
+   :matchupProjection(leagueKey,awayData,homeData,when,hg.id);
+  if(!before.ok)continue;
+  const actualAway=ag.home?hg.for:ag.for,actualHome=ag.home?ag.for:hg.for;
+  holdouts.push({id:hg.id,date:hg.date,awayActual:actualAway,homeActual:actualHome,
+   awayForecast:before.awayScore,homeForecast:before.homeScore,
+   predictedWinner:Math.sign(before.homeScore-before.awayScore),actualWinner:Math.sign(actualHome-actualAway)});
+ }
+ const absoluteErrors=holdouts.flatMap(r=>[Math.abs(r.awayForecast-r.awayActual),Math.abs(r.homeForecast-r.homeActual)]);
+ const n=holdouts.length;
+ return {n,mae:n?average(absoluteErrors):null,winnerCorrect:n?holdouts.filter(r=>r.predictedWinner===r.actualWinner).length:null,holdouts};
+}
+function auditView(){
+ const check=predictionStatus();if(check)return `<div class="eyebrow">MODEL VALIDATION</div>${check}`;
+ const m=predictionState.result,audit=m.matchupAudit||{n:0,holdouts:[]};
+ const c=league==='nfl'?'22.5 pts / team':'112.5 pts / team';
+ let out=`<div class="eyebrow">V15 • MODEL AUDIT</div><h3>Show the receipts, not just the picks.</h3><p class="note">A serious paid prediction service needs timestamped out-of-sample forecasts, error tracking and calibration checks. This panel only evaluates prior head-to-head meetings available in BOTH loaded team schedules, with every holdout predicted using games played strictly before its kickoff. It cannot claim league-wide accuracy.</p>
+ <div class="odds-grid"><div class="odds-box"><small>VALID MATCHUP HOLDOUTS</small><strong>${audit.n}</strong></div><div class="odds-box"><small>HOLDOUT SCORE MAE</small><strong>${audit.mae===null?'—':audit.mae.toFixed(1)}</strong><div class="hint">Average absolute points error, both teams</div></div><div class="odds-box"><small>WINNER CORRECT</small><strong>${audit.n?audit.winnerCorrect+' / '+audit.n:'—'}</strong><div class="hint">Not statistically meaningful on tiny samples</div></div><div class="odds-box"><small>PRIOR BASELINE</small><strong>${c}</strong><div class="hint">Approximate fixed league baseline</div></div></div>`;
+ if(!audit.n)out+='<div class="alert">No eligible prior meeting has enough pregame history for both teams. That is not a model success or failure. To advertise an accuracy rate, we need league-wide past schedules and a genuinely held-out season.</div>';
+ else out+=`<div class="scroll"><table class="players"><thead><tr><th>PRIOR MEETING</th><th>ACTUAL (A–H)</th><th>PROJECTED (A–H)</th></tr></thead><tbody>${audit.holdouts.map(g=>`<tr><td>${escapeHtml(g.date.slice(0,10))}</td><td>${g.awayActual}–${g.homeActual}</td><td>${num1(g.awayForecast)}–${num1(g.homeForecast)}</td></tr>`).join('')}</tbody></table></div>`;
+ out+='<div class="market-banner"><b>What would make this commercially credible?</b><p class="note">1) Acquire licensed historical scores, injuries, lineups and archived bookmaker odds. 2) Freeze predictions before games, then evaluate the next untouched season. 3) Report model MAE vs a simple baseline, winner accuracy and probability Brier score/calibration. 4) Monitor availability and API-cost quotas. 5) Add account login, subscriptions, entitlement checks and a terms/privacy policy before selling access.</p><p class="note warn">No independent out-of-sample benchmark or audited ROI exists in this build. Simulation count is not an accuracy statistic.</p></div>';
+ return out;
+}
+function copyForecastSnapshot(){
+ const m=predictionState.result;if(!m?.ok||!selected)return;
+ const [a,h]=teams(selected),audit=m.matchupAudit||{};
+ const text=['Renzo Sports Lab V18 • RESEARCH ONLY',`Generated: ${new Date().toISOString()}`,
+ `Matchup: ${a.team?.displayName||'Away'} @ ${h.team?.displayName||'Home'}`,
+ `Game: ${selected.date} • ESPN event ${selected.id}`,
+ `Projected regulation points: ${num1(m.awayScore)} – ${num1(m.homeScore)}`,
+ `Completed pregame history: ${m.away.n} away-team games / ${m.home.n} home-team games`,
+ `Offense: ${num1(m.away.pf)} / ${num1(m.home.pf)} • Defense allowed: ${num1(m.away.pa)} / ${num1(m.home.pa)}`,
+ `Full-matchup holdouts: ${audit.n||0} • Score MAE: ${Number.isFinite(audit.mae)?num1(audit.mae):'not established'}`,
+ 'Scores and shares are UNCALIBRATED projections, not guaranteed outcomes; data/injury coverage may be incomplete.'].join('\n');
+ const btn=$('copyForecast');
+ if(navigator.clipboard?.writeText)navigator.clipboard.writeText(text).then(()=>{if(btn)btn.textContent='Copied research snapshot ✓'}).catch(()=>{if(btn)btn.textContent='Copy unavailable on this browser'});
+ else if(btn)btn.textContent='Copy unavailable on this browser';
+}
+function resetPropOdds(){propOddsState={key:null,loading:false,data:null,error:''}}
+function propOddsKey(){const ev=oddsEvent();return ev&&propState.player?`${league}:${ev.id}:${propState.player}:${propState.market}`:null}
+async function fetchPlayerOdds(){
+ const event=oddsEvent(),key=propOddsKey();if(!event||!key){propOddsState={key:null,loading:false,data:null,error:'No current bookmaker market for this matchup.'};renderDetail();return}
+ const lg=league,market=propState.market;
+ propOddsState={key,loading:true,data:null,error:''};renderDetail();
+ try{const res=await getJson(`/.netlify/functions/sports?league=${lg}&oddsProps=${encodeURIComponent(event.id)}&market=${encodeURIComponent(market)}`);
+  if(propOddsKey()!==key)return;propOddsState={key,loading:false,data:res,error:''};
+ }catch(e){if(propOddsKey()===key)propOddsState={key,loading:false,data:null,error:e.message}}
+ if(propOddsKey()===key&&tab==='props')renderDetail();
+}
+function playerOddsMarkup(player){
+ if(propState.market==='two_td')return `<div class="prop-odds"><b>Bookmaker player lines</b><p class="note">The 2+ touchdown selector is a <b>historical hit-rate research line</b> (1.5). This integration does not request a 2+ TD sportsbook market unless a matching provider outcome is available; no invented price.</p></div>`;
+ const key=propOddsKey(),msg=bookmakerStatus();
+ if(msg)return `<div class="prop-odds"><b>Bookmaker player lines</b>${msg}</div>`;
+ if(!key)return '<div class="prop-odds"><p class="note">Current bookmaker event is unavailable for this player.</p></div>';
+ if(propOddsState.key!==key)return '<div class="prop-odds"><button id="loadPropOdds" type="button" class="action">Fetch actual bookmaker player lines</button><p class="note">Optional on-demand provider request; may use quota credits.</p></div>';
+ if(propOddsState.loading)return '<div class="prop-odds"><p class="note">Fetching current bookmaker player lines…</p></div>';
+ if(propOddsState.error)return `<div class="prop-odds"><p class="note warn">Provider error: ${escapeHtml(propOddsState.error)}</p><button id="loadPropOdds" class="action" type="button">Retry</button></div>`;
+ const list=[];for(const b of propOddsState.data?.books||[])for(const o of b.offers||[])if(oddsEventName(o.player)===oddsEventName(player.name))list.push({...o,book:b.book});
+ if(!list.length)return '<div class="prop-odds"><p class="note">The connected provider returned no matching player lines. Prop access may require a higher plan or books may not have posted this market.</p><button id="loadPropOdds" class="action" type="button">Retry</button></div>';
+ return `<div class="prop-odds"><b>Actual sportsbook player lines • ${escapeHtml(propOddsState.data.source)}</b><div class="odds-row heading"><span>BOOK</span><span>SIDE</span><span>LINE</span><span>DECIMAL</span></div>${list.slice(0,25).map(x=>`<div class="odds-row"><b>${escapeHtml(x.book)}</b><span>${escapeHtml(x.name)}</span><span>${x.point===null?'Yes/No':x.point}</span><span>${fmtDecimal(x.decimal)}</span></div>`).join('')}<p class="note">Prices may be stale. No invented market lines or model-versus-odds edge claims.</p></div>`;
+}
+
+function liveIntelView(){
+ if(!selected)return '';
+ const [a,h]=teams(selected),period=numberValue(selected.status?.period)||0,clock=selected.status?.displayClock||'—',st=state(selected);
+ let out=`<div class="intel-grid"><div class="intel-card"><h3>Game clock</h3><p>${escapeHtml(status(selected))}</p><p>Period ${escapeHtml(period||'—')} • ${escapeHtml(clock)}</p></div><div class="intel-card"><h3>Official game score</h3><p>${escapeHtml(a.team?.abbreviation||'Away')}: ${escapeHtml(a.score??'—')}</p><p>${escapeHtml(h.team?.abbreviation||'Home')}: ${escapeHtml(h.score??'—')}</p></div></div>`;
+ if(st==='post')return out+'<p class="note good">The game is final. These are provider-reported results, not a projection.</p>';
+ const m=predictionState.key===predictionKey()?predictionState.result:null;
+ const live=liveGameProjection(selected,league,m);
+ if(live){out+=`<div class="intel-card" style="margin-top:12px"><h3>Live-adjusted matchup forecast</h3><p class="model-percentage">${escapeHtml(a.team?.abbreviation||'AWAY')} ${Math.round(live.awayScore)} – ${Math.round(live.homeScore)} ${escapeHtml(h.team?.abbreviation||'HOME')}</p><p class="note">Current score: ${live.actualAway}–${live.actualHome} • ${(live.elapsed*100).toFixed(0)}% of regulation elapsed. Remaining expected points blend each team's pregame offensive/defensive matchup with observed scoring pace. Overtime is not modeled.</p></div>`}
+ else if(st==='in')out+='<p class="note">Live forecast activates after a valid scoreboard clock and enough elapsed time are reported. No generic league-average score is substituted.</p>';
+ else out+='<p class="note">This game has not started. For pregame numbers, open Projection.</p>';
+ if(!m?.ok)out+=`<div style="margin-top:10px">${predictionStatus()}</div>`;
+ return out;
+}
+// V28 empirical period model: preserve paired scoring and conceding within each historical game.
+function periodEngine(aRows,hRows,kind,market,line){
+ const extract=rows=>readPeriods(rows,true,kind).flatMap(g=>{const opp=readPeriods([g],false,kind)[0];return opp?[{own:g.periodValue,opp:opp.periodValue}]:[]}).slice(0,20);
+ const a=extract(aRows),h=extract(hRows);if(a.length<5||h.length<5)return null;
+ const pairs=[];for(let i=0;i<a.length;i++)for(let j=0;j<h.length;j++)pairs.push({a:(a[i].own+h[j].opp)/2,h:(h[j].own+a[i].opp)/2,w:Math.pow(.94,i+j)});
+ const value=p=>market==='total'?p.a+p.h:market==='away'?p.a:market==='home'?p.h:p.h-p.a;
+ const w=pairs.reduce((s,p)=>s+p.w,0),avg=k=>pairs.reduce((s,p)=>s+p[k]*p.w,0)/w;
+ // Averaging two observations artificially narrows variation. Restore dispersion by sqrt(2).
+ const mean=pairs.reduce((s,p)=>s+value(p)*p.w,0)/w;let over=0,under=0,push=0;
+ for(const p of pairs){const v=mean+(value(p)-mean)*Math.SQRT2;const x=market==='margin'?Math.round(v):Math.max(0,Math.round(v));if(x>line)over+=p.w;else if(x<line)under+=p.w;else push+=p.w;}
+ return {away:avg('a'),home:avg('h'),mean,over:over/w,under:under/w,push:push/w,nA:a.length,nH:h.length};
+}
+let periodChoice='q1',periodMarket='total',periodLine=null;
+function periodAudit(rows,kind){let errors=[],baseline=[];const sorted=[...rows].sort((a,b)=>Date.parse(a.date)-Date.parse(b.date));for(let i=5;i<sorted.length;i++){const prior=readPeriods(sorted.slice(0,i).reverse(),true,kind).slice(0,20),actual=readPeriods([sorted[i]],true,kind)[0];if(prior.length<5||!actual)continue;errors.push(Math.abs(recentAverage(prior,'periodValue')-actual.periodValue));baseline.push(Math.abs(prior.reduce((s,g)=>s+g.periodValue,0)/prior.length-actual.periodValue));}return {n:errors.length,mae:errors.length?errors.reduce((s,x)=>s+x,0)/errors.length:null,baseline:baseline.length?baseline.reduce((s,x)=>s+x,0)/baseline.length:null};}
+function periodView(){const pending=predictionStatus();if(pending)return pending;const m=predictionState.result, labels={q1:'1st quarter',q2:'2nd quarter',q3:'3rd quarter',q4:'4th quarter',half:'1st half',half2:'2nd half'};const preliminary=periodEngine(m.away.rows,m.home.rows,periodChoice,periodMarket,0);const line=periodLine??(preliminary?Math.round(preliminary.mean)+.5:0);const p=periodEngine(m.away.rows,m.home.rows,periodChoice,periodMarket,line);const a=periodAudit(m.away.rows,periodChoice),h=periodAudit(m.home.rows,periodChoice);return `<div class="eyebrow">V29 • PERIOD QUANT</div><h3>Quarter & half team props</h3><div class="rows"><label>Period <select id="periodChoice">${Object.entries(labels).map(([k,v])=>`<option value="${k}" ${k===periodChoice?'selected':''}>${v}</option>`).join('')}</select></label><label>Market <select id="periodMarket">${Object.entries({total:'Combined total',away:'Away team total',home:'Home team total',margin:'Home margin (spread)'}).map(([k,v])=>`<option value="${k}" ${k===periodMarket?'selected':''}>${v}</option>`).join('')}</select></label><label>Test line <input id="periodLine" type="number" step="0.5" value="${line}"></label></div>${p?`<div class="model-score"><div><small>AWAY</small><strong>${num1(p.away)}</strong></div><span>–</span><div><small>HOME</small><strong>${num1(p.home)}</strong></div></div><div class="item"><b>Model line: ${num1(p.mean)}</b><p>Above ${(100*p.over).toFixed(1)}% • Below ${(100*p.under).toFixed(1)}% • Push ${(100*p.push).toFixed(1)}%</p><small>${p.nA} away / ${p.nH} home historical games • uncalibrated estimates</small></div>`:'<div class="alert">Need at least five games with complete paired period scores per team. No estimates available.</div>'}<div class="item"><b>Chronological team-scoring audit (not matchup probability calibration)</b><p>Away: ${a.n} holdouts • MAE ${a.mae===null?'—':num1(a.mae)} vs simple mean ${a.baseline===null?'—':num1(a.baseline)}</p><p>Home: ${h.n} holdouts • MAE ${h.mae===null?'—':num1(h.mae)} vs simple mean ${h.baseline===null?'—':num1(h.baseline)}</p></div><p class="note">Pregame only. Margin = home minus away; for home -3.5 test +3.5. Line is editable, not a sportsbook quote. Recency-weighted paired historical scores with dispersion correction; no verified player quarter logs or calibrated probabilities. No overtime.</p>`;}
+
+
+let pq={key:'',rows:[],loading:false,error:'',period:0,line:5.5};
+function pqKey(){return `${league}:${selected?.id}:${propState.player}`}
+function playerQuarterView(){
+ if(league!=='nba')return '<div class="item">NFL player quarter statistics are not supported by this parser. Use team Quarter Props or full-game Player Props.</div>';
+ if(!propRosters&&!propRosterLoading&&!propRosterError)queueMicrotask(ensurePropsRosters);
+ const players=allPropPlayers(), current=pq.key===pqKey(), rows=current?pq.rows:[], vals=rows.map(r=>r.points[pq.period]);
+ const n=vals.length, mean=n?vals.reduce((a,b)=>a+b,0)/n:0, over=vals.filter(x=>x>pq.line).length, under=vals.filter(x=>x<pq.line).length;
+ let mae=0;
+ const chronological=[...vals].reverse();for(let i=5;i<n;i++)mae+=Math.abs(chronological[i]-chronological.slice(0,i).reduce((a,b)=>a+b,0)/i);
+ return `<div class="eyebrow">PLAYER PERIOD RESEARCH</div><h3>NBA individual quarter points</h3><label>Player <select id="pqPlayer">${players.map(p=>`<option value="${p.id}" ${p.id===propState.player?'selected':''}>${escapeHtml(p.name)}</option>`).join('')}</select></label><label>Period <select id="pqPeriod">${['Q1','Q2','Q3','Q4','1H','2H'].map((x,i)=>`<option value="${i}" ${i===pq.period?'selected':''}>${x}</option>`).join('')}</select></label><label>Test line <input id="pqLine" type="number" min="0" step="0.5" value="${pq.line}"></label><button class="action" id="pqLoad" ${!players.length||(current&&pq.loading)?'disabled':''}>${current&&pq.loading?'Checking historical games…':'Load player quarter history'}</button><p class="note">${escapeHtml(propRosterError|| (current?pq.error:''))}</p>${n>=5?`<div class="item"><b>Historical average ${num1(mean)} points</b><p>Above ${num1(100*over/n)}% • Below ${num1(100*under/n)}% • Push ${num1(100*(n-over-under)/n)}%</p><p>${n} verified games • chronological mean MAE ${n>5?num1(mae/(n-5)):'not enough holdouts'}</p></div>`:'<p>At least five reconciled games required for estimates.</p>'}${rows.map(r=>`<div class="item">${escapeHtml(r.date.slice(0,10))} • ${r.points[pq.period]} points</div>`).join('')}<p class="note">Empirical hit rates, not calibrated matchup probabilities. Only completed pre-match games whose scoring plays reconcile with the official player box score. Zero-scoring quarters include possible bench time. No fabricated lines or player stats.</p>`;
+}
+async function loadPlayerQuarter(){const key=pqKey(), id=propState.player, before=Date.parse(selected?.date), season=gameSeason();if(!id||!Number.isFinite(before))return;const run=pq={...pq,key,rows:[],loading:true,error:''};renderDetail();try{const data=await getJson(`/.netlify/functions/sports?league=nba&player=${id}&season=${season}`);const games=normalizeGameLog(data,before).slice(0,12);let rejected=0;for(let i=0;i<games.length;i+=3){if(pq!==run||pqKey()!==key)return;const batch=await Promise.allSettled(games.slice(i,i+3).map(async g=>{const d=await getJson(`/.netlify/functions/sports?league=nba&quarterPlayer=${id}&event=${encodeURIComponent(g.id)}`);if(!d.valid||Date.parse(d.date)>=before||!Number.isFinite(Date.parse(d.date)))throw Error('Unverified history');return d;}));for(const r of batch){if(r.status==='fulfilled')run.rows.push(r.value);else rejected++;}if(pq!==run||pqKey()!==key)return;if(tab==='playerperiod')renderDetail();}run.error=`${run.rows.length} reconciled games; ${rejected} unavailable or failed verification.`;}catch(e){run.error=e.message;}finally{run.loading=false;if(pq===run&&pqKey()===key&&tab==='playerperiod')renderDetail();}}
+
+// V30: local prospective research ledger, no simulated bets or invented results.
+const LAB_LEDGER='sports-lab-v30-ledger';
+function ledgerRead(){try{const x=JSON.parse(localStorage.getItem(LAB_LEDGER)||'[]');return Array.isArray(x)?x:[]}catch{return []}}
+function ledgerWrite(x){localStorage.setItem(LAB_LEDGER,JSON.stringify(x))}
+function ledgerMetrics(rows){const done=rows.filter(r=>r.actual&&[r.actual.a,r.actual.h,r.a,r.h].every(Number.isFinite));const n=done.length;return {n,mae:n?done.reduce((s,r)=>s+(Math.abs(r.a-r.actual.a)+Math.abs(r.h-r.actual.h))/2,0)/n:null,winners:done.filter(r=>Math.sign(r.a-r.h)===Math.sign(r.actual.a-r.actual.h)).length}}
+let ledgerMessage='',ledgerBusy=false;
+function validationView(){const pending=predictionStatus(),rows=ledgerRead(),m=ledgerMetrics(rows);return `<div class="eyebrow">V30 • PROSPECTIVE VALIDATION</div><h3>Forecast journal</h3><p class="note">Device-local research record; not independently timestamped or tamper-proof. Record before kickoff, grade only completed games. Full-game score projections are compared with final scores including overtime.</p><div class="odds-grid"><div class="odds-box"><small>RECORDED</small><strong>${rows.length}</strong></div><div class="odds-box"><small>GRADED</small><strong>${m.n}</strong></div><div class="odds-box"><small>SCORE MAE</small><strong>${m.mae===null?'—':m.mae.toFixed(2)}</strong></div><div class="odds-box"><small>WINNER MATCH</small><strong>${m.n?m.winners+' / '+m.n:'—'}</strong></div></div>${pending||'<button class="action" id="ledgerSave">Record current forecast</button>'} <button class="action" id="ledgerGrade" ${ledgerBusy?'disabled':''}>${ledgerBusy?'Checking finals…':'Grade pending games'}</button> <button class="action" id="ledgerExport">Export journal JSON</button><p class="note">${escapeHtml(ledgerMessage)}</p><div class="scroll"><table class="players"><thead><tr><th>GAME</th><th>FORECAST A–H</th><th>FINAL A–H</th></tr></thead><tbody>${rows.slice().reverse().slice(0,100).map(r=>`<tr><td>${escapeHtml(r.name)}<br>${escapeHtml(r.kickoff)}</td><td>${num1(r.a)} – ${num1(r.h)}</td><td>${r.actual?`${r.actual.a} – ${r.actual.h}`:'Pending'}</td></tr>`).join('')}</tbody></table></div>`}
+async function ledgerSave(){try{const e=selected,l=league,m=predictionState.result;if(!e||!m?.ok||!['nba','nfl'].includes(l)||![m.awayScore,m.homeScore].every(Number.isFinite)||Date.now()>=Date.parse(e.date)||state(e)!=='pre')throw Error('Only valid pregame forecasts can be recorded.');const date=new Date(e.date).toISOString().slice(0,10).replace(/-/g,'');const board=await getJson(`/.netlify/functions/sports?league=${l}&date=${date}`);const fresh=board.events?.find(x=>String(x.id)===String(e.id));if(!fresh||fresh.status?.type?.state!=='pre'||!(Date.now()<Date.parse(fresh.date)))throw Error('Pregame status not verified; no entry saved.');const rows=ledgerRead(),id=l+':'+e.id;if(rows.some(r=>r.id===id))throw Error('First forecast already recorded; duplicates blocked.');if(rows.length>=5000)throw Error('Journal full; export required.');const [a,h]=teams(e);rows.push({id,event:String(e.id),league:l,name:`${a.team?.displayName||'Away'} @ ${h.team?.displayName||'Home'}`,kickoff:fresh.date,created:new Date().toISOString(),version:'30.0',a:m.awayScore,h:m.homeScore,actual:null});ledgerWrite(rows);ledgerMessage='Pregame forecast recorded.'}catch(e){ledgerMessage=e.message}if(tab==='validation')renderDetail()}
+async function ledgerGrade(){if(ledgerBusy)return;ledgerBusy=true;renderDetail();let graded=0,failed=0;try{for(const r of ledgerRead().filter(x=>!x.actual).slice(0,10)){try{const data=await getJson(`/.netlify/functions/sports?league=${r.league}&event=${r.event}`);const c=data.header?.competitions?.[0];if(String(c?.id)!==r.event&&String(data.header?.id)!==r.event)continue;if(c?.status?.type?.completed!==true||!/final/i.test(c.status.type.name||c.status.type.description||''))continue;const a=c.competitors?.find(x=>x.homeAway==='away'),h=c.competitors?.find(x=>x.homeAway==='home');if(!a||!h||!/^\d+$/.test(String(a.score))||!/^\d+$/.test(String(h.score)))continue;const current=ledgerRead(),entry=current.find(x=>x.id===r.id);if(entry&&!entry.actual){entry.actual={a:Number(a.score),h:Number(h.score),gradedAt:new Date().toISOString()};ledgerWrite(current);graded++}}catch{failed++}}ledgerMessage=`Graded ${graded}; ${failed} feed/storage failures. Up to 10 pending checked.`}finally{ledgerBusy=false;if(tab==='validation')renderDetail()}}
+function ledgerExport(){const url=URL.createObjectURL(new Blob([JSON.stringify(ledgerRead(),null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='sports-lab-v30-journal.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+
+function renderDetail(){
+ if(!selected)return;
+ const oldList=$('detailBody').querySelector('.prop-players');
+ const oldMarket=$('detailBody').querySelectorAll('.prop-controls');
+ const listTop=oldList?.scrollTop||0,marketLeft=[...oldMarket].map(x=>x.scrollLeft);
+ const scrollY=window.scrollY;
+ // Preserve the search caret through a delayed roster/stat response.
+ const searching=document.activeElement?.id==='propSearch';
+ const selection=searching?{start:document.activeElement.selectionStart,end:document.activeElement.selectionEnd}:null;
+ $('detail').classList.remove('hidden');
+ const [a,h]=teams(selected);
+ $('match').innerHTML=`<div class="match"><div>${img(logo(a),a.team?.displayName||'Away')}<strong>${escapeHtml(a.team?.displayName||'Away')}</strong><div class="match-score">${escapeHtml(a.score??'—')}</div></div><span class="vs">VS</span><div>${img(logo(h),h.team?.displayName||'Home')}<strong>${escapeHtml(h.team?.displayName||'Home')}</strong><div class="match-score">${escapeHtml(h.score??'—')}</div></div></div>`;
+ $('detailBody').innerHTML=tab==='overview'?overview():tab==='players'?playerRows():tab==='playerintel'?playerIntelView():tab==='periods'?periodView():tab==='playerperiod'?playerQuarterView():tab==='projection'?projectionView():tab==='odds'?oddsView():tab==='history'?historyView():tab==='validation'?validationView():tab==='audit'?auditView():tab==='injuries'?injuriesView():tab==='props'?propsView():tab==='liveintel'?liveIntelView():simView();
+ if(tab==='validation'){$('ledgerSave')?.addEventListener('click',ledgerSave);$('ledgerGrade')?.addEventListener('click',ledgerGrade);$('ledgerExport')?.addEventListener('click',ledgerExport)}
+ if(summaryError&&['players','playerintel','injuries'].includes(tab))$('detailBody').insertAdjacentHTML('afterbegin',`<div class="alert">${escapeHtml(summaryError)}</div>`);
+ if(tab==='playerperiod'){$('pqLoad')?.addEventListener('click',loadPlayerQuarter);$('pqPlayer')?.addEventListener('change',e=>{propState.player=e.target.value;renderDetail()});$('pqPeriod')?.addEventListener('change',e=>{pq.period=Number(e.target.value);renderDetail()});$('pqLine')?.addEventListener('change',e=>{if(e.target.value!==''&&Number.isFinite(Number(e.target.value))&&Number(e.target.value)>=0){pq.line=Number(e.target.value);renderDetail()}})}
+ if(tab==='simulation'){$('runSim').addEventListener('click',simulate);$('autoSim').addEventListener('click',autoFillSim)}
+ const copy=$('copyForecast');if(copy)copy.addEventListener('click',copyForecastSnapshot);
+ const retry=$('retryPrediction');if(retry)retry.addEventListener('click',()=>{resetPrediction();ensurePrediction();renderDetail()});
+ if(tab==='playerintel'&&summary)loadRosters();
+ if(['odds','projection','props'].includes(tab))queueMicrotask(ensureOdds);
+ const oddsRetry=$('retryOdds');if(oddsRetry)oddsRetry.addEventListener('click',()=>{oddsState.updated=0;ensureOdds()});
+ const tdShortcut=$('openTouchdownProps');if(tdShortcut)tdShortcut.addEventListener('click',()=>{tab='props';propState.market='any_td';propState.line=null;syncTabs();renderDetail();saveSelection()});
+ const propOddsBtn=$('loadPropOdds');if(propOddsBtn)propOddsBtn.addEventListener('click',fetchPlayerOdds);
+ if(tab==='props'){
+  const node=$('detailBody').querySelector('.prop-players');if(node)node.scrollTop=listTop;
+  $('detailBody').querySelectorAll('.prop-controls').forEach((x,i)=>{if(marketLeft[i]!==undefined)x.scrollLeft=marketLeft[i]});
+  if(searching){const input=$('propSearch');if(input){input.focus({preventScroll:true});if(selection)input.setSelectionRange(selection.start,selection.end)}}
+ }
+ if(Math.abs(window.scrollY-scrollY)>4)window.scrollTo({top:scrollY,behavior:'instant'});
+}
+async function fetchSummary(id,requestedLeague){
+ try{const data=await getJson(`/.netlify/functions/sports?league=${requestedLeague}&event=${encodeURIComponent(id)}`);
+ if(selected?.id===id&&league===requestedLeague){summary=data;summaryError='';if(['overview','players','playerintel','injuries','odds'].includes(tab))renderDetail()}
+ }catch(e){if(selected?.id===id&&league===requestedLeague){summaryError='Detailed game data unavailable: '+e.message;if(['overview','players','playerintel','injuries','odds'].includes(tab))renderDetail()}}
+}
+function restoreGame(event){
+ resetProps();resetPropOdds();resetPrediction();selected=event;summary=null;summaryError='';
+ if(['overview','players','playerintel','simulation','projection','odds','history','audit','validation','injuries','props','liveintel','periods','playerperiod'].includes(restoration?.tab))tab=restoration.tab;
+ if(tab==='props'&&restoration){propState.team=restoration.team||'all';propState.player=restoration.player||null;propState.market=restoration.market||'';propState.window=[5,10,20].includes(restoration.window)?restoration.window:5;propState.search=restoration.search||'';}
+ syncTabs();renderDetail();if(['projection','simulation','liveintel','history','audit'].includes(tab))queueMicrotask(ensurePrediction);if(tab==='odds')queueMicrotask(ensureOdds);fetchSummary(event.id,league);
+}
+async function openGame(id){
+ const next=events.find(e=>e.id===id);if(!next)return;
+ // Reopening the selected matchup should not erase player selections.
+ if(selected?.id===id){$('detail').scrollIntoView({behavior:'smooth',block:'start'});return}
+ resetProps();resetPropOdds();resetPrediction();selected=next;
+ summary=null;summaryError='';tab='overview';syncTabs();renderDetail();saveSelection();
+ $('detail').scrollIntoView({behavior:'smooth',block:'start'});
+ await fetchSummary(id,league)
+}
+function syncTabs(){document.querySelectorAll('#detailTabs button').forEach(b=>b.classList.toggle('active',b.dataset.v===tab))}
+setInterval(()=>{if($('autoRefresh').checked&&!document.hidden&&!busy)load(true)},60000);
+document.querySelectorAll('#league button').forEach(b=>b.onclick=()=>{league=b.dataset.v;document.querySelectorAll('#league button').forEach(x=>x.classList.toggle('active',x===b));closeDetail();load()});
+document.querySelectorAll('#day button').forEach(b=>b.onclick=()=>{offset=Number(b.dataset.v);document.querySelectorAll('#day button').forEach(x=>x.classList.toggle('active',x===b));closeDetail();load()});
+$('games').addEventListener('click',e=>{let b=e.target.closest('[data-id]');if(b)openGame(b.dataset.id)});
+$('detailBody').addEventListener('click',e=>{if(tab==='props')propsAction(e.target)});
+$('detailBody').addEventListener('change',e=>{if(tab==='props')propsChange(e.target);if(tab==='periods'){const t=e.target;if(t.id==='periodChoice'){periodChoice=t.value;periodLine=null}else if(t.id==='periodMarket'){periodMarket=t.value;periodLine=null}else if(t.id==='periodLine'){if(t.value===''||!Number.isFinite(Number(t.value)))return;periodLine=Number(t.value)}else return;renderDetail()}});
+$('detailBody').addEventListener('input',e=>{if(tab==='props'&&e.target.id==='propSearch'){
+  propState.search=e.target.value;propState.showMore=false;
+  const root=$('detailBody').querySelector('.prop-players');if(root){
+   const matches=allPropPlayers().filter(p=>(propState.team==='all'||p.teamId===propState.team)&&p.name.toLowerCase().includes(propState.search.trim().toLowerCase()));
+   root.innerHTML=matches.slice(0,35).map(propPlayerRow).join('');root.scrollTop=0;
+   const hint=$('detailBody').querySelector('.prop-list-hint');if(hint)hint.textContent=`Showing ${Math.min(matches.length,35)} of ${matches.length} matches`;
+  }
+  saveSelection();
+ }});
+document.querySelectorAll('#detailTabs button').forEach(b=>b.onclick=()=>{tab=b.dataset.v;syncTabs();renderDetail();if(['history','audit'].includes(tab))queueMicrotask(ensurePrediction);saveSelection()});
+$('teamSearch').addEventListener('input',renderGames);$('gameFilter').addEventListener('change',renderGames);$('clearFilters').onclick=()=>{$('teamSearch').value='';$('gameFilter').value='all';renderGames()};$('pickDate').addEventListener('change',()=>{const v=$('pickDate').value;if(!/^\d{4}-\d{2}-\d{2}$/.test(v))return;const [y,m,d]=v.split('-').map(Number);const target=new Date(y,m-1,d,12),today=new Date();today.setHours(12,0,0,0);if(target.getFullYear()!==y||target.getMonth()!==m-1||target.getDate()!==d)return;offset=Math.round((target-today)/86400000);closeDetail();load()});$('close').onclick=closeDetail;
+$('healthCheck').onclick=async()=>{const el=$('feedHealth');el.classList.remove('hidden');el.textContent='Checking Netlify sports function…';try{const r=await getJson('/.netlify/functions/sports?health=1');el.textContent=`Sports proxy: ${r.ok?'CONNECTED':'FAILED'} • version ${r.version||'unknown'} • ${r.dataProvider||'unidentified provider'} • Odds key: ${r.oddsConfigured?'CONFIGURED':'NOT CONFIGURED'}. This does not prove every ESPN stat endpoint is available.`}catch(e){el.textContent='Sports proxy unavailable: '+e.message}};$('refresh').onclick=()=>{load(true);if(selected){fetchSummary(selected.id,league);resetPrediction();ensurePrediction()}};
+// Startup restores the last league and date without forcing the user out of a detail panel.
+document.querySelectorAll('#league button').forEach(b=>b.classList.toggle('active',b.dataset.v===league));
+load();
+</script><script>
+(()=>{const $=id=>document.getElementById(id), l=$('worldLeague'),d=$('worldDate'),r=$('worldResults'),st=$('worldStatus');const groups={soccer:[['epl','Premier League'],['ucl','Champions League'],['laliga','La Liga'],['seriea','Serie A'],['bundesliga','Bundesliga'],['ligue1','Ligue 1'],['mls','MLS'],['ligamx','Liga MX']],tennis:[['atp','ATP'],['wta','WTA']],mlb:[['mlb','MLB']],nhl:[['nhl','NHL']],ufc:[['ufc','UFC']],ncaab:[['ncaab','College basketball']],ncaaf:[['ncaaf','College football']]};let seq=0,controller,active='nfl';d.value=new Date(Date.now()-new Date().getTimezoneOffset()*60000).toISOString().slice(0,10);function add(parent,tag,txt){const x=document.createElement(tag);x.textContent=txt;parent.append(x);return x}async function loadWorld(){const n=++seq;controller?.abort();controller=new AbortController();r.replaceChildren();st.textContent='Loading scoreboard…';try{const total=Number($('worldRange').value), start=Date.parse(d.value+'T00:00:00Z'), merged=new Map(), failed=[];let success=0;for(let offset=0;offset<total;offset+=7){const date=new Date(start+offset*86400000).toISOString().slice(0,10).replaceAll('-','');try{const response=await fetch('/.netlify/functions/sports?'+new URLSearchParams({world:l.value,date,days:String(Math.min(7,total-offset))}),{signal:controller.signal});const data=await response.json();if(!response.ok)throw Error(data.detail||data.error||'HTTP '+response.status);if(n!==seq)return;if(!Array.isArray(data.events))throw Error('Provider did not supply an event list');success++;for(const e of data.events)merged.set(String(e.id),e);for(const f of data.failedDays||[])failed.push(f);}catch(e){if(e.name==='AbortError'||n!==seq)return;failed.push({date,error:e.message});}st.textContent=`Loading ${Math.min(offset+7,total)}/${total} days…`;}if(!success)throw Error(failed[0]?.error||'No feed response');const events=[...merged.values()].sort((a,b)=>Date.parse(a.date)-Date.parse(b.date));st.textContent=`${events.length} events • ${new Date().toLocaleTimeString()}`+(failed.length?' • Partial coverage; some requests failed.':'');if(!events.length&&!failed.length)st.textContent='No events scheduled in returned feed for this range.';for(const e of events){const card=add(r,'div','');card.className='item';card.dataset.state=e.status?.type?.state||e.competitions?.[0]?.status?.type?.state||'';add(card,'b',e.name||e.shortName||'Event');if(e.date&&Number.isFinite(Date.parse(e.date)))add(card,'p',new Date(e.date).toLocaleString());for(const c of e.competitions||[]){add(card,'p',(c.competitors||[]).map(x=>(x.team?.displayName||x.athlete?.displayName||x.displayName||'Competitor')+(x.score!=null?' '+(typeof x.score==='object'?(x.score.displayValue??x.score.value??''):x.score):'')).join(' — ')||c.name||'Details unavailable');add(card,'small',c.status?.type?.shortDetail||e.status?.type?.shortDetail||'Status unavailable')}}applyWorldFilter()}catch(e){if(n===seq&&e.name!=='AbortError')st.textContent='Feed unavailable: '+e.message;}}$('sportGrid').addEventListener('click',e=>{const b=e.target.closest('[data-sport]');if(!b)return;active=b.dataset.sport;for(const x of $('sportGrid').querySelectorAll('button'))x.setAttribute('aria-pressed',String(x===b));const core=!groups[active];$('corePanel').hidden=!core;$('worldPanel').classList.toggle('hidden',core);if(core){++seq;controller?.abort();document.querySelector('#league [data-v="'+active+'"]').click();return}l.replaceChildren(...groups[active].map(([v,t])=>new Option(t,v)));$('worldTitle').textContent=b.textContent.trim();loadWorld()});for(const x of [l,d,$('worldRange')])x.addEventListener('change',loadWorld);function applyWorldFilter(){const term=$('worldSearch').value.toLowerCase(),state=$('worldFilter').value;for(const card of r.children)card.hidden=(!card.textContent.toLowerCase().includes(term)||(state!=='all'&&card.dataset.state!==state));}$('worldSearch').oninput=applyWorldFilter;$('worldFilter').onchange=applyWorldFilter;$('worldToday').onclick=()=>{d.value=new Date(Date.now()-new Date().getTimezoneOffset()*60000).toISOString().slice(0,10);loadWorld()};$('worldLoad').onclick=loadWorld;document.querySelectorAll('#league button').forEach(b=>b.addEventListener('click',()=>{if(groups[active])return;active=b.dataset.v;for(const x of $('sportGrid').querySelectorAll('button'))x.setAttribute('aria-pressed',String(x.dataset.sport===active))}));})();
+</script></body></html>
